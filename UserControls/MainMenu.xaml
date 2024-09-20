@@ -6,6 +6,37 @@
              xmlns:local="clr-namespace:DnDcharacterCreator.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="8"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565"/>
+                        <GradientStop Color="#FF424242" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF171717" Offset="1"/>
+                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -19,7 +50,15 @@
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                <Button Name="new_character" Content="Create New Character" Click="new_character_Click"/>
+                <Button Name="new_character" Content="Create New Character" Click="new_character_Click">
+                    <Button.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF171717" Offset="1"/>
+                            <GradientStop Color="#FF333333" Offset="0.02"/>
+                        </LinearGradientBrush>
+                    </Button.Foreground>
+                </Button>
                 <Button Name="load_character" Content="Load Old Character" Click="load_character_Click" Margin="0 50 0 0"/>
             </StackPanel>
         </Grid>

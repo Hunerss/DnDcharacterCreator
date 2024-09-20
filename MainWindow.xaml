@@ -6,6 +6,31 @@
         xmlns:local="clr-namespace:DnDcharacterCreator"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="8"/>
+            <Setter Property="FontFamily" Value="Times NewRoman"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565"/>
+                        <GradientStop Color="#FF424242" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="images/button_background.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/images/window_background.png"/>
+    </Window.Background>
     <Grid>
         <Frame x:Name="frame" NavigationUIVisibility="Hidden" />
     </Grid>

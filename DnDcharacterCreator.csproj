@@ -8,4 +8,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="images\button_background.png" />
+    <None Remove="images\window_background.png" />
+    <None Remove="window_background.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\button_background.png" />
+    <Resource Include="images\window_background.png" />
+    <Resource Include="window_background.png" />
+  </ItemGroup>
+
 </Project>
