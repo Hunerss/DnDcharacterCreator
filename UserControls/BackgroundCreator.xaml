@@ -5,8 +5,69 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnDcharacterCreator.UserControls"
              mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="9*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Character Background" />
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                    <TextBlock Text="Select Alignment:" Margin="0,0,0,5" />
+                    <ComboBox x:Name="AlignmentComboBox" Width="200">
+                        <ComboBoxItem Content="Lawful Good" />
+                        <ComboBoxItem Content="Neutral Good" />
+                        <ComboBoxItem Content="Chaotic Good" />
+                        <ComboBoxItem Content="Lawful Neutral" />
+                        <ComboBoxItem Content="True Neutral" />
+                        <ComboBoxItem Content="Chaotic Neutral" />
+                        <ComboBoxItem Content="Lawful Evil" />
+                        <ComboBoxItem Content="Neutral Evil" />
+                        <ComboBoxItem Content="Chaotic Evil" />
+                    </ComboBox>
+
+                    <TextBlock Text="Select Background:" Margin="10,20,0,5" />
+                    <ComboBox x:Name="BackgroundComboBox" Width="200">
+                        <ComboBoxItem Content="Acolyte" />
+                        <ComboBoxItem Content="Charlatan" />
+                        <ComboBoxItem Content="Criminal" />
+                        <ComboBoxItem Content="Entertainer" />
+                        <ComboBoxItem Content="Folk Hero" />
+                        <ComboBoxItem Content="Guild Artisan" />
+                        <ComboBoxItem Content="Hermit" />
+                        <ComboBoxItem Content="Noble" />
+                        <ComboBoxItem Content="Outlander" />
+                        <ComboBoxItem Content="Sage" />
+                        <ComboBoxItem Content="Sailor" />
+                        <ComboBoxItem Content="Soldier" />
+                        <ComboBoxItem Content="Urchin" />
+                    </ComboBox>
+
+                    <TextBlock Text="Write something about your character" Margin="10,20,0,5" />
+                    <TextBlock Text="Description" Margin="10,10,0,5" />
+                    <TextBox x:Name="description" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                    <TextBlock Text="Personality Traits" Margin="10,20,0,5"/>
+                    <TextBox x:Name="personality" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                    <TextBlock Text="Ideals" Margin="10,20,0,5"/>
+                    <TextBox x:Name="ideals" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                    <TextBlock Text="Bonds" Margin="10,20,0,5"/>
+                    <TextBox x:Name="bonds" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                    <TextBlock Text="Flaws" Margin="10,20,0,5"/>
+                    <TextBox x:Name="flaws" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                    <TextBlock Text="About" Margin="10,20,0,5"/>
+                    <TextBox x:Name="about" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+
+                    <Button x:Name="go" Content="Finish" Click="go_Click" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </UserControl>
