@@ -81,10 +81,10 @@ namespace DnDcharacterCreator.UserControls
 
         private void SetWindow()
         {
-            int race = rnd.Next(0, 9);
+            int race = rnd.Next(0, 10);
             RacesComboBox.SelectedIndex = race;
-            ClassesComboBox.SelectedIndex = rnd.Next(0,9);
-            SubclassesComboBox.SelectedIndex = rnd.Next(0,4);
+            ClassesComboBox.SelectedIndex = rnd.Next(0,10);
+            SubclassesComboBox.SelectedIndex = rnd.Next(0,5);
             characterName.Text = GenerateRandomName(race);
         }
 
