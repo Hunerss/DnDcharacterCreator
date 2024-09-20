@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnDcharacterCreator.UserControls"
              mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -12,135 +13,138 @@
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
         <TextBlock Text="Character Basics" />
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*" />
-                <ColumnDefinition Width="6*" />
-                <ColumnDefinition Width="3*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="1" HorizontalAlignment="Center">
-                <!--Name-->
-                <TextBlock Text="What's your character name?" />
-                <DockPanel HorizontalAlignment="Center">
-                    <TextBox x:Name="characterName" Text="Character Name" Width="200px" />
-                    <Button x:Name="radnomName" Content="Random" Width="55px" Padding="2px" Click="radnomName_Click" />
-                </DockPanel>
-                
-                <!--Race-->
-                <TextBlock Text="Choose your character race?" />
-                <ComboBox x:Name="RacesComboBox" Width="200" Height="30" VerticalAlignment="Top" Margin="10" SelectionChanged="RacesComboBox_SelectionChanged">
-                    <ComboBoxItem Content="Human" />
-                    <ComboBoxItem Content="Elf" />
-                    <ComboBoxItem Content="Dwarf" />
-                    <ComboBoxItem Content="Halfling" />
-                    <ComboBoxItem Content="Dragonborn" />
-                    <ComboBoxItem Content="Gnome" />
-                    <ComboBoxItem Content="Half-Elf" />
-                    <ComboBoxItem Content="Half-Orc" />
-                    <ComboBoxItem Content="Tiefling" />
-                    <ComboBoxItem Content="Aasimar" />
-                </ComboBox>
-                
-                <!--Class-->
-                <TextBlock Text="Choose your character class?" />
-                <ComboBox x:Name="ClassesComboBox" Width="200" Height="30" VerticalAlignment="Top" Margin="10" SelectionChanged="ClassesComboBox_SelectionChanged">
-                    <ComboBoxItem Content="Barbarian" />
-                    <ComboBoxItem Content="Bard" />
-                    <ComboBoxItem Content="Wizard" />
-                    <ComboBoxItem Content="Druid" />
-                    <ComboBoxItem Content="Rogue" />
-                    <ComboBoxItem Content="Paladin" />
-                    <ComboBoxItem Content="Cleric" />
-                    <ComboBoxItem Content="Fighter" />
-                    <ComboBoxItem Content="Warlock" />
-                    <ComboBoxItem Content="Monk" />
-                </ComboBox>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                    <!--Name-->
+                    <TextBlock Text="What's your character name?" />
+                    <DockPanel HorizontalAlignment="Center">
+                        <TextBox x:Name="characterName" Text="Character Name" Width="200px" />
+                        <Button x:Name="radnomName" Content="Random" Width="55px" Padding="2px" Click="radnomName_Click" />
+                    </DockPanel>
 
-                <!--Sub-class-->
-                <TextBlock Text="Choose your character sub-class?" />
-                <ComboBox x:Name="SubclassesComboBox" Width="200" Height="30" VerticalAlignment="Top"></ComboBox>
-                
-                <!--Hit Points-->
-                <TextBlock Text="Select your character hit points" />
-                <DockPanel>
-                    <TextBlock Text="Hit Points: " />
-                    <TextBox x:Name="hitpoints_textbox" Text="0" />
-                    <Button x:Name="roll_button" Content="Roll" Click="button_Click" />
-                    <Button x:Name="avreage_button" Content="Avg" Click="button_Click" />
-                    <Button x:Name="max_button" Content="Max" Click="button_Click" />
-                </DockPanel>
-
-                <DockPanel>
-                    <TextBlock x:Name="ability_scores_text" Text="Ability Scores: " />
-                    <ComboBox x:Name="ability_scores" DropDownClosed="ability_scores_DropDownClosed">
-                        <ComboBoxItem Name="custom" Content="Custom" IsSelected="True" />
-                        <ComboBoxItem Name="point_buy" Content="Point Buy" />
+                    <!--Race-->
+                    <TextBlock Text="Choose your character race?" />
+                    <ComboBox x:Name="RacesComboBox" Width="200" Height="30" VerticalAlignment="Top" Margin="10" SelectionChanged="RacesComboBox_SelectionChanged">
+                        <ComboBoxItem Content="Human" />
+                        <ComboBoxItem Content="Elf" />
+                        <ComboBoxItem Content="Dwarf" />
+                        <ComboBoxItem Content="Halfling" />
+                        <ComboBoxItem Content="Dragonborn" />
+                        <ComboBoxItem Content="Gnome" />
+                        <ComboBoxItem Content="Half-Elf" />
+                        <ComboBoxItem Content="Half-Orc" />
+                        <ComboBoxItem Content="Tiefling" />
+                        <ComboBoxItem Content="Aasimar" />
                     </ComboBox>
-                </DockPanel>
-                
-                <DockPanel>
-                    <TextBlock x:Name="spellcasting_ability_text" Text="Spellcasting Ability: " Visibility="Hidden"/>
-                    <TextBlock x:Name="spellcasting_ability" Text="IDK" Visibility="Hidden" />
-                </DockPanel>
 
-                <TextBlock x:Name="bonusses" Text="Nan" Visibility="Hidden" />
+                    <!--Class-->
+                    <TextBlock Text="Choose your character class?" />
+                    <ComboBox x:Name="ClassesComboBox" Width="200" Height="30" VerticalAlignment="Top" Margin="10" SelectionChanged="ClassesComboBox_SelectionChanged">
+                        <ComboBoxItem Content="Barbarian" />
+                        <ComboBoxItem Content="Bard" />
+                        <ComboBoxItem Content="Wizard" />
+                        <ComboBoxItem Content="Druid" />
+                        <ComboBoxItem Content="Rogue" />
+                        <ComboBoxItem Content="Paladin" />
+                        <ComboBoxItem Content="Cleric" />
+                        <ComboBoxItem Content="Fighter" />
+                        <ComboBoxItem Content="Warlock" />
+                        <ComboBoxItem Content="Monk" />
+                    </ComboBox>
 
-                <DockPanel>
-                    <TextBlock x:Name="remaining_points_text" Text="Spellcasting Ability: " Visibility="Hidden" />
-                    <TextBlock x:Name="remaining_points" Text="24" Visibility="Hidden" />
-                </DockPanel>
+                    <!--Sub-class-->
+                    <TextBlock Text="Choose your character sub-class?" />
+                    <ComboBox x:Name="SubclassesComboBox" Width="200" Height="30" VerticalAlignment="Top"></ComboBox>
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                    </Grid.RowDefinitions>
-                    <TextBox x:Name="strength_textbox" Text="8" Grid.Column="1" Grid.Row="0" />
-                    <Button x:Name="strength_button_add" Content="+" Grid.Column="0" Grid.Row="0" Click="add_Click"/>
-                    <Button x:Name="strength_button_remove" Content="+" Grid.Column="2" Grid.Row="0" Click="remove_Click"/>
-                    <TextBlock Text="Strength" Grid.Column="1" Grid.Row="1" />
-                    
-                    <TextBox x:Name="dexterity_textbox" Text="8" Grid.Column="4" Grid.Row="0" />
-                    <Button x:Name="dexterity_button_add" Content="+" Grid.Column="3" Grid.Row="0" Click="add_Click" />
-                    <Button x:Name="dexterity_button_remove" Content="+" Grid.Column="5" Grid.Row="0" Click="remove_Click" />
-                    <TextBlock Text="Dexternity" Grid.Column="4" Grid.Row="1" />
-                    
-                    <TextBox x:Name="constitution_textbox" Text="8" Grid.Column="7" Grid.Row="0" />
-                    <Button x:Name="constitution_button_add" Content="+" Grid.Column="6" Grid.Row="0" Click="add_Click" />
-                    <Button x:Name="constitution_button_remove" Content="+" Grid.Column="8" Grid.Row="0" Click="remove_Click" />
-                    <TextBlock Text="Constitution" Grid.Column="7" Grid.Row="1" />
-                    
-                    <TextBox x:Name="inteligence_textbox" Text="8" Grid.Column="1" Grid.Row="2" />
-                    <Button x:Name="inteligence_button_add" Content="+" Grid.Column="0" Grid.Row="2" Click="add_Click" />
-                    <Button x:Name="inteligence_button_remove" Content="+" Grid.Column="2" Grid.Row="2" Click="remove_Click" />
-                    <TextBlock Text="Inteligence" Grid.Column="1" Grid.Row="3" />
-                    
-                    <TextBox x:Name="wisdom_textbox" Text="8" Grid.Column="4" Grid.Row="2" />
-                    <Button x:Name="wisdom_button_add" Content="+" Grid.Column="3" Grid.Row="2" Click="add_Click" />
-                    <Button x:Name="wisdom_button_remove" Content="+" Grid.Column="5" Grid.Row="2" Click="remove_Click" />
-                    <TextBlock Text="Wisdom" Grid.Column="4" Grid.Row="3" />
-                    
-                    <TextBox x:Name="charisma_textbox" Text="8" Grid.Column="7" Grid.Row="2" />
-                    <Button x:Name="charisma_button_add" Content="+" Grid.Column="6" Grid.Row="2" Click="add_Click" />
-                    <Button x:Name="charisma_button_remove" Content="+" Grid.Column="8" Grid.Row="2" Click="remove_Click" />
-                    <TextBlock Text="Charisma" Grid.Column="7" Grid.Row="3" />
-                </Grid>
-            </StackPanel>
-        </Grid>
+                    <!--Hit Points-->
+                    <TextBlock Text="Select your character hit points" />
+                    <DockPanel>
+                        <TextBlock Text="Hit Points: " />
+                        <TextBox x:Name="hitpoints_textbox" Text="0" />
+                        <Button x:Name="avreage_button" Content="Avg" Click="button_Click" />
+                        <Button x:Name="max_button" Content="Max" Click="button_Click" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock x:Name="ability_scores_text" Text="Ability Scores: " />
+                        <ComboBox x:Name="ability_scores" DropDownClosed="ability_scores_DropDownClosed">
+                            <ComboBoxItem Name="custom" Content="Custom" IsSelected="True" />
+                            <ComboBoxItem Name="point_buy" Content="Point Buy" />
+                        </ComboBox>
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock x:Name="spellcasting_ability_text" Text="Spellcasting Ability: " Visibility="Hidden" />
+                        <TextBlock x:Name="spellcasting_ability" Text="IDK" Visibility="Hidden" />
+                    </DockPanel>
+
+                    <TextBlock x:Name="bonusses" Text="Nan" Visibility="Hidden" />
+
+                    <DockPanel x:Name="points" Visibility="Hidden">
+                        <TextBlock x:Name="remaining_points_text" Text="Spellcasting Ability: " />
+                        <TextBlock x:Name="remaining_points" Text="24" />
+                    </DockPanel>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="1*" />
+                        </Grid.RowDefinitions>
+                        <TextBox x:Name="strength_textbox" Text="8" Grid.Column="1" Grid.Row="0" />
+                        <Button x:Name="strength_button_add" Content="+" Grid.Column="0" Grid.Row="0" Click="add_Click" />
+                        <Button x:Name="strength_button_remove" Content="-" Grid.Column="2" Grid.Row="0" Click="remove_Click" />
+                        <TextBlock Text="Strength" Grid.Column="1" Grid.Row="1" />
+
+                        <TextBox x:Name="dexterity_textbox" Text="8" Grid.Column="4" Grid.Row="0" />
+                        <Button x:Name="dexterity_button_add" Content="+" Grid.Column="3" Grid.Row="0" Click="add_Click" />
+                        <Button x:Name="dexterity_button_remove" Content="-" Grid.Column="5" Grid.Row="0" Click="remove_Click" />
+                        <TextBlock Text="Dexternity" Grid.Column="4" Grid.Row="1" />
+
+                        <TextBox x:Name="constitution_textbox" Text="8" Grid.Column="7" Grid.Row="0" />
+                        <Button x:Name="constitution_button_add" Content="+" Grid.Column="6" Grid.Row="0" Click="add_Click" />
+                        <Button x:Name="constitution_button_remove" Content="-" Grid.Column="8" Grid.Row="0" Click="remove_Click" />
+                        <TextBlock Text="Constitution" Grid.Column="7" Grid.Row="1" />
+
+                        <TextBox x:Name="inteligence_textbox" Text="8" Grid.Column="1" Grid.Row="2" />
+                        <Button x:Name="inteligence_button_add" Content="+" Grid.Column="0" Grid.Row="2" Click="add_Click" />
+                        <Button x:Name="inteligence_button_remove" Content="-" Grid.Column="2" Grid.Row="2" Click="remove_Click" />
+                        <TextBlock Text="Inteligence" Grid.Column="1" Grid.Row="3" />
+
+                        <TextBox x:Name="wisdom_textbox" Text="8" Grid.Column="4" Grid.Row="2" />
+                        <Button x:Name="wisdom_button_add" Content="+" Grid.Column="3" Grid.Row="2" Click="add_Click" />
+                        <Button x:Name="wisdom_button_remove" Content="-" Grid.Column="5" Grid.Row="2" Click="remove_Click" />
+                        <TextBlock Text="Wisdom" Grid.Column="4" Grid.Row="3" />
+
+                        <TextBox x:Name="charisma_textbox" Text="8" Grid.Column="7" Grid.Row="2" />
+                        <Button x:Name="charisma_button_add" Content="+" Grid.Column="6" Grid.Row="2" Click="add_Click" />
+                        <Button x:Name="charisma_button_remove" Content="-" Grid.Column="8" Grid.Row="2" Click="remove_Click" />
+                        <TextBlock Text="Charisma" Grid.Column="7" Grid.Row="3" />
+                    </Grid>
+
+                    <Button x:Name="go" Content="Finish" Click="go_Click" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </UserControl>
