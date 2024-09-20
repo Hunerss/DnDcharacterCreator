@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DnDcharacterCreator.Classes;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DnDcharacterCreator.UserControls
 {
@@ -20,9 +9,105 @@ namespace DnDcharacterCreator.UserControls
     /// </summary>
     public partial class SkillsCreator : UserControl
     {
-        public SkillsCreator()
+        MainWindow window;
+        Character character;
+        Random rnd = new();
+
+        private int maxProficiencies = 3;
+        private int currentSelections = 0;
+
+        private Dictionary<string, string[]> classSkills = new Dictionary<string, string[]>
+        {
+            { "Barbarian", new[] { "Animal Handling", "Athletics", "Survival" } },
+            { "Bard", new[] { "Deception", "Performance", "Persuasion" } },
+            { "Cleric", new[] { "Insight", "Medicine", "Religion" } },
+            { "Druid", new[] { "Animal Handling", "Arcana", "Nature" } },
+            { "Fighter", new[] { "Acrobatics", "Athletics", "Perception" } },
+            { "Monk", new[] { "Acrobatics", "History", "Stealth" } },
+            { "Paladin", new[] { "Athletics", "Insight", "Religion" } },
+            { "Rogue", new[] { "Acrobatics", "Deception", "Stealth" } },
+            { "Sorcerer", new[] { "Arcana", "Deception", "Persuasion" } },
+            { "Warlock", new[] { "Arcana", "Deception", "Intimidation" } },
+            { "Wizard", new[] { "Arcana", "History", "Investigation" } }
+        };
+
+        public SkillsCreator(MainWindow win, Character character)
         {
             InitializeComponent();
+            window = win;
+            this.character = character;
+        }
+
+        private void SkillChecked(object sender, RoutedEventArgs e)
+        {
+            if (currentSelections < maxProficiencies)
+            {
+                currentSelections++;
+                UpdateProficiencyCount();
+            }
+            else
+            {
+                CheckBox checkBox = sender as CheckBox;
+                if (checkBox != null)
+                {
+                    checkBox.IsChecked = false;
+                    currentSelections--;
+                }
+            }
+        }
+
+        private void SkillUnchecked(object sender, RoutedEventArgs e)
+        {
+            currentSelections--;
+            UpdateProficiencyCount();
+        }
+
+        private void UpdateProficiencyCount()
+        {
+            ProficiencyCountTextBlock.Text = $"Choose your skills ({maxProficiencies - currentSelections} available)";
+        }
+
+        public void AutoSelectSkills(string characterClass)
+        {
+            if (classSkills.ContainsKey(characterClass))
+            {
+                var skillsFromClass = classSkills[characterClass];
+
+                foreach (var skill in skillsFromClass)
+                {
+                    CheckBox checkBox = SkillsStackPanel.Children
+                        .OfType<CheckBox>()
+                        .FirstOrDefault(cb => cb.Content.ToString() == skill);
+
+                    if (checkBox != null && !checkBox.IsChecked.HasValue)
+                    {
+                        checkBox.IsChecked = true;
+                        currentSelections++;
+                    }
+                }
+                UpdateProficiencyCount();
+            }
+        }
+
+        public void SetCharacterClass(Character character)
+        {
+            AutoSelectSkills(character.Class);
+        }
+
+        private void go_Click(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem cbi = AlignmentComboBox.SelectedItem as ComboBoxItem;
+
+            character.Alignment = cbi.Content.ToString();
+            cbi = BackgroundComboBox.SelectedItem as ComboBoxItem;
+            character.Background = cbi.Content.ToString();
+            character.Description = description.Text;
+            character.PersonalityTraits = personality.Text;
+            character.Ideals = ideals.Text;
+            character.Bonds = bonds.Text;
+            character.Flaws = flaws.Text;
+            character.About = about.Text;
+            window.frame.NavigationService.Navigate(new SkillsCreator(window, character));
         }
     }
 }

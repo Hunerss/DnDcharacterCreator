@@ -7,6 +7,45 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="9*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Character Basics" />
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                    <StackPanel x:Name="SkillsStackPanel">
+                        <TextBlock x:Name="ProficiencyCountTextBlock" Text="Choose your skills (3 available)" />
+
+                        <CheckBox x:Name="AcrobaticsCheckBox" Content="Acrobatics" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="AnimalHandlingCheckBox" Content="Animal Handling" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="ArcanaCheckBox" Content="Arcana" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="AthleticsCheckBox" Content="Athletics" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="DeceptionCheckBox" Content="Deception" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="HistoryCheckBox" Content="History" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="InsightCheckBox" Content="Insight" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="IntimidationCheckBox" Content="Intimidation" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="InvestigationCheckBox" Content="Investigation" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="MedicineCheckBox" Content="Medicine" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="NatureCheckBox" Content="Nature" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="PerceptionCheckBox" Content="Perception" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="PerformanceCheckBox" Content="Performance" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="PersuasionCheckBox" Content="Persuasion" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="ReligionCheckBox" Content="Religion" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="SleightOfHandCheckBox" Content="Sleight of Hand" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="StealthCheckBox" Content="Stealth" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        <CheckBox x:Name="SurvivalCheckBox" Content="Survival" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                    </StackPanel>
+                    
+                    <Button x:Name="go" Content="Finish" Click="go_Click" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </UserControl>
