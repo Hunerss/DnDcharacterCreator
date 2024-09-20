@@ -96,7 +96,7 @@ namespace DnDcharacterCreator.UserControls
 
         private void go_Click(object sender, RoutedEventArgs e)
         {
-            ComboBoxItem cbi = AlignmentComboBox.SelectedItem as ComboBoxItem;
+            /*ComboBoxItem cbi = AlignmentComboBox.SelectedItem as ComboBoxItem;
 
             character.Alignment = cbi.Content.ToString();
             cbi = BackgroundComboBox.SelectedItem as ComboBoxItem;
@@ -107,7 +107,7 @@ namespace DnDcharacterCreator.UserControls
             character.Bonds = bonds.Text;
             character.Flaws = flaws.Text;
             character.About = about.Text;
-            window.frame.NavigationService.Navigate(new SkillsCreator(window, character));
+            window.frame.NavigationService.Navigate(new SkillsCreator(window, character));*/
         }
     }
 }
