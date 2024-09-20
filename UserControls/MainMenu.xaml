@@ -36,13 +36,21 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Welcome to DnD Character Creator" />
+        <TextBlock Text="Welcome to DnD Character Creator" Style="{StaticResource Header}"/>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*" />
