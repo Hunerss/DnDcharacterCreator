@@ -474,13 +474,19 @@ namespace DnDcharacterCreator.UserControls
         {
             ComboBoxItem cbi = RacesComboBox.SelectedItem as ComboBoxItem;
 
-            Character character = new();
-            character.Name = characterName.Text;
-            character.Race = cbi.Content.ToString();
+            Character character = new()
+            {
+                Name = characterName.Text,
+                Race = cbi?.Content?.ToString()
+            };
             cbi = ClassesComboBox.SelectedItem as ComboBoxItem;
-            character.Class = cbi.Content.ToString();
+            character.Class = cbi?.Content?.ToString();
             cbi = SubclassesComboBox.SelectedItem as ComboBoxItem;
-            character.SubClass = cbi.Content.ToString();
+            if (cbi != null && !string.IsNullOrEmpty(cbi.Content?.ToString()))
+                character.SubClass = cbi.Content.ToString();
+            else
+                character.SubClass = "Error in saving";
+            Console.WriteLine(character.SubClass);
             if (spellcasting_ability.Text != "IDK")
                 character.Spellcasting = spellcasting_ability.Text;
             else
