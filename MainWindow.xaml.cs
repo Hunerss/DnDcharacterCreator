@@ -19,6 +19,7 @@ namespace DnDcharacterCreator
         public MainWindow()
         {
             InitializeComponent();
+            frame.NavigationService.Navigate(new MainMenu(this));
         }
     }
 }
