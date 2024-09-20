@@ -29,12 +29,12 @@ namespace DnDcharacterCreator.UserControls
 
         private void new_character_Click(object sender, RoutedEventArgs e)
         {
-            window.frame.NavigationService.Navigate(new MainMenu(this));
+            window.frame.NavigationService.Navigate(new CharacterCreator(this));
         }
 
         private void load_character_Click(object sender, RoutedEventArgs e)
         {
-            window.frame.NavigationService.Navigate(new MainMenu(this));
+            //window.frame.NavigationService.Navigate(new MainMenu(this));
         }
     }
 }
