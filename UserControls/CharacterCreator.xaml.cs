@@ -103,7 +103,7 @@ namespace DnDcharacterCreator.UserControls
             }
         }
 
-        private void roll_button_Click(object sender, RoutedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -118,12 +118,17 @@ namespace DnDcharacterCreator.UserControls
 
         }
 
-        private void strength_button_add_Click(object sender, RoutedEventArgs e)
+        private void add_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void strength_button_remove_Click(object sender, RoutedEventArgs e)
+        private void remove_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RacesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

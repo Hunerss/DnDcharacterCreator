@@ -28,7 +28,7 @@
                 
                 <!--Race-->
                 <TextBlock Text="Choose your character race?" />
-                <ComboBox x:Name="RacesComboBox" Width="200" Height="30" VerticalAlignment="Top" Margin="10">
+                <ComboBox x:Name="RacesComboBox" Width="200" Height="30" VerticalAlignment="Top" Margin="10" SelectionChanged="RacesComboBox_SelectionChanged">
                     <ComboBoxItem Content="Human" />
                     <ComboBoxItem Content="Elf" />
                     <ComboBoxItem Content="Dwarf" />
