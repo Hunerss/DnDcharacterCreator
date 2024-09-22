@@ -1,5 +1,6 @@
 ﻿using DnDcharacterCreator.Classes;
 using System.Diagnostics;
+using System.Security.Claims;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -486,6 +487,122 @@ namespace DnDcharacterCreator.UserControls
             charisma_button_remove.IsEnabled = false;
         }
 
+        private SavingThrows GetSavingThrows(string className)
+        {
+            SavingThrows sv = new();
+            switch (className)
+            {
+                case "Barbarian":
+                    sv.Strength = true;       
+                    sv.Dexterity = false;
+                    sv.Constitution = true;   
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = false;
+                    break;
+
+                case "Bard":
+                    sv.Strength = false;
+                    sv.Dexterity = true;    
+                    sv.Constitution = false;
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = true;     
+                    break;
+
+                case "Cleric":
+                    sv.Strength = false;
+                    sv.Dexterity = false;
+                    sv.Constitution = true; 
+                    sv.Intelligence = false;
+                    sv.Wisdom = true;         
+                    sv.Charisma = false;
+                    break;
+
+                case "Druid":
+                    sv.Strength = false;
+                    sv.Dexterity = false;
+                    sv.Constitution = true;   
+                    sv.Intelligence = false;
+                    sv.Wisdom = true;         
+                    sv.Charisma = false;
+                    break;
+
+                case "Fighter":
+                    sv.Strength = true;      
+                    sv.Dexterity = false;
+                    sv.Constitution = true;    
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = false;
+                    break;
+
+                case "Monk":
+                    sv.Strength = false;
+                    sv.Dexterity = true;       
+                    sv.Constitution = false;
+                    sv.Intelligence = false;
+                    sv.Wisdom = true;           
+                    sv.Charisma = false;
+                    break;
+
+                case "Paladin":
+                    sv.Strength = true;       
+                    sv.Dexterity = false;
+                    sv.Constitution = true;     
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = true;       
+                    break;
+
+                case "Rogue":
+                    sv.Strength = false;
+                    sv.Dexterity = true;       
+                    sv.Constitution = false;
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = false;
+                    break;
+
+                case "Sorcerer":
+                    sv.Strength = false;
+                    sv.Dexterity = false;
+                    sv.Constitution = true;    
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = true;      
+                    break;
+
+                case "Warlock":
+                    sv.Strength = false;
+                    sv.Dexterity = false;
+                    sv.Constitution = true;     
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = true;        
+                    break;
+
+                case "Wizard":
+                    sv.Strength = false;
+                    sv.Dexterity = false;
+                    sv.Constitution = false;
+                    sv.Intelligence = true;      
+                    sv.Wisdom = false;
+                    sv.Charisma = false;
+                    break;
+
+                default:
+                    sv.Strength = false;
+                    sv.Dexterity = false;
+                    sv.Constitution = false;
+                    sv.Intelligence = false;
+                    sv.Wisdom = false;
+                    sv.Charisma = false;
+                    break;
+            }
+            return sv;
+        }
+
         private void go_Click(object sender, RoutedEventArgs e)
         {
             ComboBoxItem cbi = RacesComboBox.SelectedItem as ComboBoxItem;
@@ -513,7 +630,7 @@ namespace DnDcharacterCreator.UserControls
                 Charisma = Convert.ToInt32(charisma_textbox.Text)
             };
             character.Stats = stats;
-
+            character.SavingThrows = GetSavingThrows(character.Class);
             character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text)+ character.Stats.Constitution;
             window.frame.NavigationService.Navigate(new BackgroundCreator(window, character));
         }
