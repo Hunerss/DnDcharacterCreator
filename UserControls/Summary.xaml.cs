@@ -20,151 +20,28 @@ namespace DnDcharacterCreator.UserControls
 
         private void AllowEditon_Click(object sender, RoutedEventArgs e)
         {
-            name.IsReadOnly = false;
-            race.IsReadOnly = false;
-            clas.IsReadOnly = false;
-            subclass.IsReadOnly = false;
-            hitpoints.IsReadOnly = false;
-            spellcastingAbility.IsReadOnly = false;
-            spellcastingBonus.IsReadOnly = false;
-            spellDC.IsReadOnly = false;
-            strength.IsReadOnly = false;
-            dexterity.IsReadOnly = false;
-            constitution.IsReadOnly = false;
-            intelligence.IsReadOnly = false;
-            wisdom.IsReadOnly = false;
-            charisma.IsReadOnly = false;
-            strength_sv.IsReadOnly = false;
-            dexterity_sv.IsReadOnly = false;
-            constitution_sv.IsReadOnly = false;
-            intelligence_sv.IsReadOnly = false;
-            wisdom_sv.IsReadOnly = false;
-            charisma_sv.IsReadOnly = false;
-            strength_sv_prof.IsReadOnly = false;
-            dexterity_sv_prof.IsReadOnly = false;
-            constitution_sv_prof.IsReadOnly = false;
-            intelligence_sv_prof.IsReadOnly = false;
-            wisdom_sv_prof.IsReadOnly = false;
-            charisma_sv_prof.IsReadOnly = false;
-            alignment.IsReadOnly = false;
-            background.IsReadOnly = false;
-            description.IsReadOnly = false;
-            ideals.IsReadOnly = false;
-            bonds.IsReadOnly = false;
-            flaws.IsReadOnly = false;
-            about.IsReadOnly = false;
-
-            acrobatics_score.IsReadOnly = false;
-            acrobatics_prof.IsReadOnly = false;
-            animal_handling_score.IsReadOnly = false;
-            animal_handling_prof.IsReadOnly = false;
-            arcana_score.IsReadOnly = false;
-            arcana_prof.IsReadOnly = false;
-            athletics_score.IsReadOnly = false;
-            athletics_prof.IsReadOnly = false;
-            deception_score.IsReadOnly = false;
-            deception_prof.IsReadOnly = false;
-            history_score.IsReadOnly = false;
-            history_prof.IsReadOnly = false;
-            insight_score.IsReadOnly = false;
-            insight_prof.IsReadOnly = false;
-            intimidation_score.IsReadOnly = false;
-            intimidation_prof.IsReadOnly = false;
-            investigation_score.IsReadOnly = false;
-            investigation_prof.IsReadOnly = false;
-            medicine_score.IsReadOnly = false;
-            medicine_prof.IsReadOnly = false;
-            nature_score.IsReadOnly = false;
-            nature_prof.IsReadOnly = false;
-            perception_score.IsReadOnly = false;
-            perception_prof.IsReadOnly = false;
-            performance_score.IsReadOnly = false;
-            performance_prof.IsReadOnly = false;
-            persuasion_score.IsReadOnly = false;
-            persuasion_prof.IsReadOnly = false;
-            religion_score.IsReadOnly = false;
-            religion_prof.IsReadOnly = false;
-            sleight_of_hand_score.IsReadOnly = false;
-            sleight_of_hand_prof.IsReadOnly = false;
-            stealth_score.IsReadOnly = false;
-            stealth_prof.IsReadOnly = false;
-            survival_score.IsReadOnly = false;
-            survival_prof.IsReadOnly = false;
-
+            TextBox[] textBoxes = [name, race, clas, subclass, hitpoints, spellcastingAbility, spellcastingBonus, spellDC, strength, dexterity, constitution,
+                intelligence, wisdom, charisma, strength_sv, dexterity_sv, constitution_sv, intelligence_sv, wisdom_sv, charisma_sv, strength_sv_prof, dexterity_sv_prof,
+                constitution_sv_prof, intelligence_sv_prof, wisdom_sv_prof, charisma_sv_prof, alignment, background, description, ideals, bonds, flaws, about,
+                acrobatics_score, acrobatics_prof, animal_handling_score, animal_handling_prof, arcana_score, arcana_prof, athletics_score, athletics_prof, deception_score, 
+                deception_prof, history_score, history_prof, insight_score, insight_prof, intimidation_score, intimidation_prof, investigation_score, investigation_prof,
+                medicine_score, medicine_prof, nature_score, nature_prof, perception_score, perception_prof, performance_score, performance_prof, persuasion_score, 
+                persuasion_prof, religion_score, religion_prof, sleight_of_hand_score, sleight_of_hand_prof, stealth_score, stealth_prof, survival_score, survival_prof];
+            foreach (TextBox textBox in textBoxes)
+                textBox.IsReadOnly = false;
         }
 
         private void FrobidEditon_Click(object sender, RoutedEventArgs e)
         {
-            name.IsReadOnly = true;
-            race.IsReadOnly = true;
-            clas.IsReadOnly = true;
-            subclass.IsReadOnly = true;
-            hitpoints.IsReadOnly = true;
-            spellcastingAbility.IsReadOnly = true;
-            spellcastingBonus.IsReadOnly = true;
-            spellDC.IsReadOnly = true;
-            strength.IsReadOnly = true;
-            dexterity.IsReadOnly = true;
-            constitution.IsReadOnly = true;
-            intelligence.IsReadOnly = true;
-            wisdom.IsReadOnly = true;
-            charisma.IsReadOnly = true;
-            strength_sv.IsReadOnly = true;
-            dexterity_sv.IsReadOnly = true;
-            constitution_sv.IsReadOnly = true;
-            intelligence_sv.IsReadOnly = true;
-            wisdom_sv.IsReadOnly = true;
-            charisma_sv.IsReadOnly = true;
-            strength_sv_prof.IsReadOnly = true;
-            dexterity_sv_prof.IsReadOnly = true;
-            constitution_sv_prof.IsReadOnly = true;
-            intelligence_sv_prof.IsReadOnly = true;
-            wisdom_sv_prof.IsReadOnly = true;
-            charisma_sv_prof.IsReadOnly = true;
-            alignment.IsReadOnly = true;
-            background.IsReadOnly = true;
-            description.IsReadOnly = true;
-            ideals.IsReadOnly = true;
-            bonds.IsReadOnly = true;
-            flaws.IsReadOnly = true;
-            about.IsReadOnly = true;
-
-            acrobatics_score.IsReadOnly = true;
-            acrobatics_prof.IsReadOnly = true;
-            animal_handling_score.IsReadOnly = true;
-            animal_handling_prof.IsReadOnly = true;
-            arcana_score.IsReadOnly = true;
-            arcana_prof.IsReadOnly = true;
-            athletics_score.IsReadOnly = true;
-            athletics_prof.IsReadOnly = true;
-            deception_score.IsReadOnly = true;
-            deception_prof.IsReadOnly = true;
-            history_score.IsReadOnly = true;
-            history_prof.IsReadOnly = true;
-            insight_score.IsReadOnly = true;
-            insight_prof.IsReadOnly = true;
-            intimidation_score.IsReadOnly = true;
-            intimidation_prof.IsReadOnly = true;
-            investigation_score.IsReadOnly = true;
-            investigation_prof.IsReadOnly = true;
-            medicine_score.IsReadOnly = true;
-            medicine_prof.IsReadOnly = true;
-            nature_score.IsReadOnly = true;
-            nature_prof.IsReadOnly = true;
-            perception_score.IsReadOnly = true;
-            perception_prof.IsReadOnly = true;
-            performance_score.IsReadOnly = true;
-            performance_prof.IsReadOnly = true;
-            persuasion_score.IsReadOnly = true;
-            persuasion_prof.IsReadOnly = true;
-            religion_score.IsReadOnly = true;
-            religion_prof.IsReadOnly = true;
-            sleight_of_hand_score.IsReadOnly = true;
-            sleight_of_hand_prof.IsReadOnly = true;
-            stealth_score.IsReadOnly = true;
-            stealth_prof.IsReadOnly = true;
-            survival_score.IsReadOnly = true;
-            survival_prof.IsReadOnly = true;
+            TextBox[] textBoxes = [name, race, clas, subclass, hitpoints, spellcastingAbility, spellcastingBonus, spellDC, strength, dexterity, constitution,
+                intelligence, wisdom, charisma, strength_sv, dexterity_sv, constitution_sv, intelligence_sv, wisdom_sv, charisma_sv, strength_sv_prof, dexterity_sv_prof,
+                constitution_sv_prof, intelligence_sv_prof, wisdom_sv_prof, charisma_sv_prof, alignment, background, description, ideals, bonds, flaws, about,
+                acrobatics_score, acrobatics_prof, animal_handling_score, animal_handling_prof, arcana_score, arcana_prof, athletics_score, athletics_prof, deception_score,
+                deception_prof, history_score, history_prof, insight_score, insight_prof, intimidation_score, intimidation_prof, investigation_score, investigation_prof,
+                medicine_score, medicine_prof, nature_score, nature_prof, perception_score, perception_prof, performance_score, performance_prof, persuasion_score, 
+                persuasion_prof, religion_score, religion_prof, sleight_of_hand_score, sleight_of_hand_prof, stealth_score, stealth_prof, survival_score, survival_prof];
+            foreach (TextBox textBox in textBoxes)
+                textBox.IsReadOnly = false;
         }
 
         private void AddProf_Click(object sender, RoutedEventArgs e)

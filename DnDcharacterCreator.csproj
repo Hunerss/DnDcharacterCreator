@@ -14,6 +14,7 @@
     <None Remove="images\icon.png" />
     <None Remove="images\summary_background.png" />
     <None Remove="images\textbox_background.png" />
+    <None Remove="images\textbox_background_sq.png" />
     <None Remove="images\window_background.png" />
     <None Remove="window_background.png" />
   </ItemGroup>
@@ -24,6 +25,7 @@
     <Resource Include="images\icon.png" />
     <Resource Include="images\summary_background.png" />
     <Resource Include="images\textbox_background.png" />
+    <Resource Include="images\textbox_background_sq.png" />
     <Resource Include="images\window_background.png" />
     <Resource Include="window_background.png" />
   </ItemGroup>
