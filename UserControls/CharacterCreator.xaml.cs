@@ -174,7 +174,7 @@ namespace DnDcharacterCreator.UserControls
 
         private void ShowSpellcastingAbilityForClass(string selectedClass)
         {
-            string[] spellcastingClasses = { "Bard", "Cleric", "Druid", "Sorcerer", "Warlock", "Wizard", "Paladin", "Ranger" };
+            string[] spellcastingClasses = { "Bard", "Cleric", "Druid", "Sorcerer", "Warlock", "Wizard", "Paladin", "Monk" };
 
             if (Array.Exists(spellcastingClasses, element => element == selectedClass))
             {
@@ -184,13 +184,13 @@ namespace DnDcharacterCreator.UserControls
                 spellcasting_ability.Text = selectedClass switch
                 {
                     "Bard" => "Charisma",
-                    "Cleric" => "Wisdom",
-                    "Druid" => "Wisdom",
                     "Sorcerer" => "Charisma",
                     "Warlock" => "Charisma",
-                    "Wizard" => "Intelligence",
                     "Paladin" => "Charisma",
+                    "Cleric" => "Wisdom",
+                    "Druid" => "Wisdom",
                     "Monk" => "Wisdom",
+                    "Wizard" => "Intelligence",
                     _ => "Unknown"
                 };
             }
@@ -632,6 +632,7 @@ namespace DnDcharacterCreator.UserControls
             character.Stats = stats;
             character.SavingThrows = GetSavingThrows(character.Class);
             character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text)+ character.Stats.Constitution;
+            character.Proficiency = 3;
             window.frame.NavigationService.Navigate(new BackgroundCreator(window, character));
         }
     }
