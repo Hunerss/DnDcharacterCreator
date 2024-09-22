@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnDcharacterCreator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="images/icon.png">
+        Title="DnD Character Creator" Height="450" Width="800" Icon="images/icon.png">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Padding" Value="10"/>

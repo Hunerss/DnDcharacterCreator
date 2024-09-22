@@ -35,6 +35,11 @@
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Style.Resources>
         </Style>
 
         <Style TargetType="TextBlock" x:Key="Header">

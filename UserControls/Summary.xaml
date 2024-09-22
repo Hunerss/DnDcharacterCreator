@@ -7,306 +7,569 @@
              mc:Ignorable="d" 
              Loaded="UserControl_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="Sq">
+
+
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+
+
+
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background_sq.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="Header2">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/textbox_background.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10" />
+                </Style>
+            </Style.Resources>
+        </Style>
+
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style TargetType="DockPanel">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+
+        <Style TargetType="MenuItem">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="MenuItem" x:Key="MenuIt">
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF9C9C9C" Offset="1" />
+                        <GradientStop Color="#FFCACACA" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
-        <Menu>
-            <MenuItem Header="Options">
+        <Menu BorderThickness="0, 0, 0, 4">
+            <Menu.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF656565" />
+                    <GradientStop Color="#FF424242" Offset="1" />
+                </LinearGradientBrush>
+            </Menu.BorderBrush>
+            <Menu.Background>
+                <ImageBrush ImageSource="/images/summary_background.png"/>
+            </Menu.Background>
+            <MenuItem Header="Options" Style="{StaticResource MenuIt}">
                 <MenuItem x:Name="allowEditon" Header="Allow edition" Click="AllowEditon_Click" />
                 <Separator />
                 <MenuItem x:Name="frobidEditon" Header="Forbid edition" Click="FrobidEditon_Click" />
             </MenuItem>
-            <MenuItem Header="Profficiences">
+            <MenuItem Header="Profficiences" Style="{StaticResource MenuIt}">
                 <MenuItem x:Name="addProf" Header="Add Proficiency" Click="AddProf_Click" />
                 <MenuItem x:Name="removeProf" Header="Remove Proficiency" Click="RemoveProf_Click" />
             </MenuItem>
         </Menu>
-        <TextBlock Grid.Row="1" Text="Your DnD Character" />
+        <TextBlock Grid.Row="1" Text="Your DnD Character" Style="{StaticResource Header}"/>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="6*" />
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
-            <ScrollViewer Grid.Column="1">
-                <StackPanel>
-                    <TextBlock Text="Basic Informations" />
-                    <DockPanel>
-                        <TextBlock Text="Name: " />
-                        <TextBox x:Name="name" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Race: " />
-                        <TextBox x:Name="race" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Class: " />
-                        <TextBox x:Name="clas" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Sub-class: " />
-                        <TextBox x:Name="subclass" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="HitPoints: " />
-                        <TextBox x:Name="hitpoints" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Proficiency: " />
-                        <TextBox x:Name="proficiency" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-                    <StackPanel x:Name="spellcastingContainer">
-                        <TextBlock Text="Spellcasting" />
+            <Border Grid.Column="1" Padding="10" BorderThickness="10" CornerRadius="20" Margin="0,20,0,20">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <ImageBrush ImageSource="/images/summary_background.png"/>
+                </Border.Background>
+                <ScrollViewer Grid.Column="1">
+                    <StackPanel>
+                        <TextBlock Text="Basic Informations" Style="{StaticResource Header2}"/>
                         <DockPanel>
-                            <TextBlock Text="Spellcasting Ability: " />
-                            <TextBox x:Name="spellcastingAbility" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                            <TextBlock Text="Name: " />
+                            <TextBox x:Name="name" Text="placeholder" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Text="Spellcasting Bonus: " />
-                            <TextBox x:Name="spellcastingBonus" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                            <TextBlock Text="Race: " />
+                            <TextBox x:Name="race" Text="placeholder"   IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Text="Spell DC: " />
-                            <TextBox x:Name="spellDC" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                            <TextBlock Text="Class: " />
+                            <TextBox x:Name="clas" Text="placeholder"   IsReadOnly="True"/>
                         </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Sub-class: " />
+                            <TextBox x:Name="subclass" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="HitPoints: " />
+                            <TextBox x:Name="hitpoints" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Proficiency: " />
+                            <TextBox x:Name="proficiency" Text="placeholder"   IsReadOnly="True" />
+                        </DockPanel>
+                        <StackPanel x:Name="spellcastingContainer">
+                            <TextBlock Text="Spellcasting" Style="{StaticResource Header2}"/>
+                            <DockPanel>
+                                <TextBlock Text="Spellcasting Ability: " />
+                                <TextBox x:Name="spellcastingAbility" Text="placeholder"   IsReadOnly="True"/>
+                            </DockPanel>
+                            <DockPanel>
+                                <TextBlock Text="Spellcasting Bonus: " />
+                                <TextBox x:Name="spellcastingBonus" Text="placeholder"   IsReadOnly="True"/>
+                            </DockPanel>
+                            <DockPanel>
+                                <TextBlock Text="Spell DC: " />
+                                <TextBox x:Name="spellDC" Text="placeholder"   IsReadOnly="True"/>
+                            </DockPanel>
+                        </StackPanel>
+                        <TextBlock Text="Stats" Style="{StaticResource Header2}"/>
+                        <DockPanel>
+                            <TextBlock Text="Strength: " />
+                            <TextBox x:Name="strength" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Dexterity: " />
+                            <TextBox x:Name="dexterity" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Constitution: " />
+                            <TextBox x:Name="constitution" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Intelligence: " />
+                            <TextBox x:Name="intelligence" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Wisdom: " />
+                            <TextBox x:Name="wisdom" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Charisma: " />
+                            <TextBox x:Name="charisma" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+
+                        <TextBlock Text="Skills" Style="{StaticResource Header2}"/>
+
+                        <DockPanel>
+                            <TextBlock Text="Acrobatics " />
+                            <TextBlock Text="(DEX): " />
+                            <TextBox x:Name="acrobatics_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="acrobatics_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Animal Handling " />
+                            <TextBlock Text="(WIS): " />
+                            <TextBox x:Name="animal_handling_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="animal_handling_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Arcana " />
+                            <TextBlock Text="(INT): " />
+                            <TextBox x:Name="arcana_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="arcana_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Athletics " />
+                            <TextBlock Text="(STR): " />
+                            <TextBox x:Name="athletics_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="athletics_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Deception " />
+                            <TextBlock Text="(CHA): " />
+                            <TextBox x:Name="deception_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="deception_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="History " />
+                            <TextBlock Text="(INT): " />
+                            <TextBox x:Name="history_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="history_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Insight " />
+                            <TextBlock Text="(WIS): " />
+                            <TextBox x:Name="insight_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="insight_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Intimidation " />
+                            <TextBlock Text="(CHA): " />
+                            <TextBox x:Name="intimidation_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="intimidation_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Investigation " />
+                            <TextBlock Text="(INT): " />
+                            <TextBox x:Name="investigation_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="investigation_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Medicine " />
+                            <TextBlock Text="(WIS): " />
+                            <TextBox x:Name="medicine_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="medicine_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Nature " />
+                            <TextBlock Text="(INT): " />
+                            <TextBox x:Name="nature_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="nature_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Perception " />
+                            <TextBlock Text="(WIS): " />
+                            <TextBox x:Name="perception_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="perception_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Performance " />
+                            <TextBlock Text="(CHA): " />
+                            <TextBox x:Name="performance_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="performance_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Persuasion " />
+                            <TextBlock Text="(CHA): " />
+                            <TextBox x:Name="persuasion_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="persuasion_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Religion " />
+                            <TextBlock Text="(WIS): " />
+                            <TextBox x:Name="religion_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="religion_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Sleight of Hand " />
+                            <TextBlock Text="(DEX): " />
+                            <TextBox x:Name="sleight_of_hand_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="sleight_of_hand_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Stealth " />
+                            <TextBlock Text="(DEX): " />
+                            <TextBox x:Name="stealth_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="stealth_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+                        <DockPanel>
+                            <TextBlock Text="Survival " />
+                            <TextBlock Text="(WIS): " />
+                            <TextBox x:Name="survival_score" Text="placeholder"   IsReadOnly="True" />
+                            <TextBox x:Name="survival_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" />
+                        </DockPanel>
+
+
+                        <TextBlock Text="Saving throws" Style="{StaticResource Header2}"/>
+                        <DockPanel>
+                            <TextBlock Text="Strength Saving Throws: " />
+                            <TextBox x:Name="strength_sv" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="strength_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Dexterity Saving Throws: " />
+                            <TextBox x:Name="dexterity_sv" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="dexterity_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Constitution Saving Throws: " />
+                            <TextBox x:Name="constitution_sv" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="constitution_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Intelligence Saving Throws: " />
+                            <TextBox x:Name="intelligence_sv" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="intelligence_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Wisdom Saving Throws: " />
+                            <TextBox x:Name="wisdom_sv" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="wisdom_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Charisma Saving Throws: " />
+                            <TextBox x:Name="charisma_sv" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="charisma_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True"/>
+                        </DockPanel>
+
+
+
+                        <TextBlock Text="Complex informaions" Style="{StaticResource Header2}"/>
+                        <DockPanel>
+                            <TextBlock Text="Alignment: " />
+                            <TextBox x:Name="alignment" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Background: " />
+                            <TextBox x:Name="background" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Description: " />
+                            <TextBox x:Name="description" Text="placeholder"   IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Ideals: " />
+                            <TextBox x:Name="ideals" Text="placeholder" IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Bonds: " />
+                            <TextBox x:Name="bonds" Text="placeholder" IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Flaws: " />
+                            <TextBox x:Name="flaws" Text="placeholder" IsReadOnly="True"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="About: " />
+                            <TextBox x:Name="about" Text="placeholder" IsReadOnly="True"/>
+                        </DockPanel>
+
+                        <!--Profficiences-->
+                        <StackPanel x:Name="profficiences_weapons">
+
+                        </StackPanel>
+                        <StackPanel x:Name="profficiences_armor">
+
+                        </StackPanel>
+                        <StackPanel x:Name="profficiences_tools">
+
+                        </StackPanel>
+                        <StackPanel x:Name="profficiences_languages">
+
+                        </StackPanel>
                     </StackPanel>
-                    <TextBlock Text="Stats" />
-                    <DockPanel>
-                        <TextBlock Text="Strength: " />
-                        <TextBox x:Name="strength" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Dexterity: " />
-                        <TextBox x:Name="dexterity" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Constitution: " />
-                        <TextBox x:Name="constitution" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Intelligence: " />
-                        <TextBox x:Name="intelligence" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Wisdom: " />
-                        <TextBox x:Name="wisdom" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Charisma: " />
-                        <TextBox x:Name="charisma" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-
-                    <TextBlock Text="Skills" />
-
-                    <DockPanel>
-                        <TextBlock Text="Acrobatics " />
-                        <TextBlock Text="(DEX): " />
-                        <TextBox x:Name="acrobatics_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="acrobatics_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Animal Handling " />
-                        <TextBlock Text="(WIS): " />
-                        <TextBox x:Name="animal_handling_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="animal_handling_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Arcana " />
-                        <TextBlock Text="(INT): " />
-                        <TextBox x:Name="arcana_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="arcana_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Athletics " />
-                        <TextBlock Text="(STR): " />
-                        <TextBox x:Name="athletics_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="athletics_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Deception " />
-                        <TextBlock Text="(CHA): " />
-                        <TextBox x:Name="deception_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="deception_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="History " />
-                        <TextBlock Text="(INT): " />
-                        <TextBox x:Name="history_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="history_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Insight " />
-                        <TextBlock Text="(WIS): " />
-                        <TextBox x:Name="insight_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="insight_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Intimidation " />
-                        <TextBlock Text="(CHA): " />
-                        <TextBox x:Name="intimidation_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="intimidation_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Investigation " />
-                        <TextBlock Text="(INT): " />
-                        <TextBox x:Name="investigation_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="investigation_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Medicine " />
-                        <TextBlock Text="(WIS): " />
-                        <TextBox x:Name="medicine_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="medicine_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Nature " />
-                        <TextBlock Text="(INT): " />
-                        <TextBox x:Name="nature_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="nature_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Perception " />
-                        <TextBlock Text="(WIS): " />
-                        <TextBox x:Name="perception_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="perception_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Performance " />
-                        <TextBlock Text="(CHA): " />
-                        <TextBox x:Name="performance_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="performance_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Persuasion " />
-                        <TextBlock Text="(CHA): " />
-                        <TextBox x:Name="persuasion_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="persuasion_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Religion " />
-                        <TextBlock Text="(WIS): " />
-                        <TextBox x:Name="religion_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="religion_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Sleight of Hand " />
-                        <TextBlock Text="(DEX): " />
-                        <TextBox x:Name="sleight_of_hand_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="sleight_of_hand_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Stealth " />
-                        <TextBlock Text="(DEX): " />
-                        <TextBox x:Name="stealth_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="stealth_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-                    <DockPanel>
-                        <TextBlock Text="Survival " />
-                        <TextBlock Text="(WIS): " />
-                        <TextBox x:Name="survival_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
-                        <TextBox x:Name="survival_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
-                    </DockPanel>
-
-
-                    <TextBlock Text="Saving throws" />
-                    <DockPanel>
-                        <TextBlock Text="Strength Saving Throws: " />
-                        <TextBox x:Name="strength_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                        <TextBox x:Name="strength_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Dexterity Saving Throws: " />
-                        <TextBox x:Name="dexterity_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                        <TextBox x:Name="dexterity_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Constitution Saving Throws: " />
-                        <TextBox x:Name="constitution_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                        <TextBox x:Name="constitution_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Intelligence Saving Throws: " />
-                        <TextBox x:Name="intelligence_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                        <TextBox x:Name="intelligence_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Wisdom Saving Throws: " />
-                        <TextBox x:Name="wisdom_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                        <TextBox x:Name="wisdom_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Charisma Saving Throws: " />
-                        <TextBox x:Name="charisma_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                        <TextBox x:Name="charisma_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-
-
-
-                    <TextBlock Text="Complex informaions" />
-                    <DockPanel>
-                        <TextBlock Text="Alignment: " />
-                        <TextBox x:Name="alignment" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Background: " />
-                        <TextBox x:Name="background" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Description: " />
-                        <TextBox x:Name="description" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Ideals: " />
-                        <TextBox x:Name="ideals" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Bonds: " />
-                        <TextBox x:Name="bonds" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="Flaws: " />
-                        <TextBox x:Name="flaws" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    <DockPanel>
-                        <TextBlock Text="About: " />
-                        <TextBox x:Name="about" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
-                    </DockPanel>
-                    
-                    <!--Profficiences-->
-                    <StackPanel x:Name="profficiences_weapons">
-                        
-                    </StackPanel>
-                    <StackPanel x:Name="profficiences_armor">
-
-                    </StackPanel>
-                    <StackPanel x:Name="profficiences_tools">
-
-                    </StackPanel>
-                    <StackPanel x:Name="profficiences_languages">
-
-                    </StackPanel>
-                </StackPanel>
-            </ScrollViewer>
+                </ScrollViewer>
+            </Border>
         </Grid>
     </Grid>
 </UserControl>
