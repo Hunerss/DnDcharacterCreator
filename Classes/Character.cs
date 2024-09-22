@@ -12,6 +12,7 @@ namespace DnDcharacterCreator.Classes
         public string Race { get; set; }
         public string Class { get; set; }
         public string SubClass { get; set; }
+        public int HitPoints { get; set; }
         public string Spellcasting { get; set; }
         public Stats Stats { get; set; }
         public string Alignment { get; set; }
@@ -22,6 +23,8 @@ namespace DnDcharacterCreator.Classes
         public string Bonds { get; set; }
         public string Flaws { get; set; }
         public string About { get; set; }
+        public string[] Skills { get; set; }
+        public Inventory Inventory { get; set; }
 
     }
 }
