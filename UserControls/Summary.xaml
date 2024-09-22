@@ -8,11 +8,23 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Your DnD Character" />
-        <Grid Grid.Row="1">
+        <Menu>
+            <MenuItem Header="Options">
+                <MenuItem x:Name="allowEditon" Header="Allow edition" Click="allowEditon_Click" />
+                <Separator />
+                <MenuItem x:Name="frobidEditon" Header="Forbid edition" Click="frobidEditon_Click" />
+            </MenuItem>
+            <MenuItem Header="Profficiences">
+                <MenuItem x:Name="addProf" Header="Add Profficiency" Click="addProf_Click" />
+                <MenuItem x:Name="removeProf" Header="Remove Profficiency" Click="removeProf_Click" />
+            </MenuItem>
+        </Menu>
+        <TextBlock Grid.Row="1" Text="Your DnD Character" />
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="6*" />
@@ -20,103 +32,149 @@
             </Grid.ColumnDefinitions>
             <ScrollViewer Grid.Column="1">
                 <StackPanel>
-                    <TextBlock Text="Chracter Name" />
+                    <TextBlock Text="Basic Informations" />
                     <DockPanel>
                         <TextBlock Text="Name: " />
-                        <TextBlock x:Name="name" Text="placeholder" />
+                        <TextBox x:Name="name" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Race: " />
-                        <TextBlock x:Name="race" Text="placeholder" />
+                        <TextBox x:Name="race" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Class: " />
-                        <TextBlock x:Name="class" Text="placeholder" />
+                        <TextBox x:Name="clas" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Sub-class: " />
-                        <TextBlock x:Name="subclass" Text="placeholder" />
+                        <TextBox x:Name="subclass" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="HitPoints: " />
-                        <TextBlock x:Name="hitpoints" Text="placeholder" />
+                        <TextBox x:Name="hitpoints" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <StackPanel x:Name="spellcastingContainer">
+                        <TextBlock Text="Spellcasting" />
                         <DockPanel>
                             <TextBlock Text="Spellcasting Ability: " />
-                            <TextBlock x:Name="spellcastingAbility" Text="placeholder" />
+                            <TextBox x:Name="spellcastingAbility" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="Spellcasting Bonus: " />
-                            <TextBlock x:Name="spellcastingBonus" Text="placeholder" />
+                            <TextBox x:Name="spellcastingBonus" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="Spell DC: " />
-                            <TextBlock x:Name="spellDC" Text="placeholder" />
+                            <TextBox x:Name="spellDC" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                         </DockPanel>
                     </StackPanel>
                     <TextBlock Text="Stats" />
                     <DockPanel>
                         <TextBlock Text="Strength: " />
-                        <TextBlock x:Name="strength" Text="placeholder" />
+                        <TextBox x:Name="strength" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Dexterity: " />
-                        <TextBlock x:Name="dexterity" Text="placeholder" />
+                        <TextBox x:Name="dexterity" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Constitution: " />
-                        <TextBlock x:Name="constitution" Text="placeholder" />
+                        <TextBox x:Name="constitution" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Intelligence: " />
-                        <TextBlock x:Name="intelligence" Text="placeholder" />
+                        <TextBox x:Name="intelligence" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Wisdom: " />
-                        <TextBlock x:Name="wisdom" Text="placeholder" />
+                        <TextBox x:Name="wisdom" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Charisma: " />
-                        <TextBlock x:Name="charisma" Text="placeholder" />
+                        <TextBox x:Name="charisma" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
-                    
-                    
+                    <TextBlock Text="Saving throws" />
+                    <DockPanel>
+                        <TextBlock Text="Strength Saving Throws: " />
+                        <TextBox x:Name="strength_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                        <TextBox x:Name="strength_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Dexterity Saving Throws: " />
+                        <TextBox x:Name="dexterity_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                        <TextBox x:Name="dexterity_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Constitution Saving Throws: " />
+                        <TextBox x:Name="constitution_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                        <TextBox x:Name="constitution_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Intelligence Saving Throws: " />
+                        <TextBox x:Name="intelligence_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                        <TextBox x:Name="intelligence_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Wisdom Saving Throws: " />
+                        <TextBox x:Name="wisdom_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                        <TextBox x:Name="wisdom_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Charisma Saving Throws: " />
+                        <TextBox x:Name="charisma_sv" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                        <TextBox x:Name="charisma_sv_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True"/>
+                    </DockPanel>
+
+
+
+                    <TextBlock Text="Complex informaions" />
                     <DockPanel>
                         <TextBlock Text="Alignment: " />
-                        <TextBlock x:Name="alignment" Text="placeholder" />
+                        <TextBox x:Name="alignment" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Background: " />
-                        <TextBlock x:Name="background" Text="placeholder" />
+                        <TextBox x:Name="background" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Description: " />
-                        <TextBlock x:Name="description" Text="placeholder" />
+                        <TextBox x:Name="description" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Ideals: " />
-                        <TextBlock x:Name="ideals" Text="placeholder" />
+                        <TextBox x:Name="ideals" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Bonds: " />
-                        <TextBlock x:Name="bonds" Text="placeholder" />
+                        <TextBox x:Name="bonds" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="Flaws: " />
-                        <TextBlock x:Name="flaws" Text="placeholder" />
+                        <TextBox x:Name="flaws" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     <DockPanel>
                         <TextBlock Text="About: " />
-                        <TextBlock x:Name="about" Text="placeholder" />
+                        <TextBox x:Name="about" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
                     
                     <!--Profficiences-->
+                    <StackPanel x:Name="profficiences_weapons">
+                        
+                    </StackPanel>
+                    <StackPanel x:Name="profficiences_armor">
+
+                    </StackPanel>
+                    <StackPanel x:Name="profficiences_tools">
+
+                    </StackPanel>
+                    <StackPanel x:Name="profficiences_skills">
+
+                    </StackPanel>
                     
-                    
+
                     <DockPanel>
                         <TextBlock Text="x: " />
-                        <TextBlock x:Name="x" Text="placeholder" />
+                        <TextBox x:Name="x" Text="placeholder" />
                     </DockPanel>
                 </StackPanel>
             </ScrollViewer>
