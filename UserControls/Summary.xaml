@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnDcharacterCreator.UserControls"
              mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,13 +15,13 @@
         </Grid.RowDefinitions>
         <Menu>
             <MenuItem Header="Options">
-                <MenuItem x:Name="allowEditon" Header="Allow edition" Click="allowEditon_Click" />
+                <MenuItem x:Name="allowEditon" Header="Allow edition" Click="AllowEditon_Click" />
                 <Separator />
-                <MenuItem x:Name="frobidEditon" Header="Forbid edition" Click="frobidEditon_Click" />
+                <MenuItem x:Name="frobidEditon" Header="Forbid edition" Click="FrobidEditon_Click" />
             </MenuItem>
             <MenuItem Header="Profficiences">
-                <MenuItem x:Name="addProf" Header="Add Profficiency" Click="addProf_Click" />
-                <MenuItem x:Name="removeProf" Header="Remove Profficiency" Click="removeProf_Click" />
+                <MenuItem x:Name="addProf" Header="Add Proficiency" Click="AddProf_Click" />
+                <MenuItem x:Name="removeProf" Header="Remove Proficiency" Click="RemoveProf_Click" />
             </MenuItem>
         </Menu>
         <TextBlock Grid.Row="1" Text="Your DnD Character" />
@@ -52,6 +53,10 @@
                     <DockPanel>
                         <TextBlock Text="HitPoints: " />
                         <TextBox x:Name="hitpoints" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Proficiency: " />
+                        <TextBox x:Name="proficiency" Text="placeholder" Background="Transparent" IsReadOnly="True" />
                     </DockPanel>
                     <StackPanel x:Name="spellcastingContainer">
                         <TextBlock Text="Spellcasting" />
@@ -93,6 +98,136 @@
                         <TextBlock Text="Charisma: " />
                         <TextBox x:Name="charisma" Text="placeholder" Background="Transparent" IsReadOnly="True"/>
                     </DockPanel>
+
+                    <TextBlock Text="Skills" />
+
+                    <DockPanel>
+                        <TextBlock Text="Acrobatics " />
+                        <TextBlock Text="(DEX): " />
+                        <TextBox x:Name="acrobatics_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="acrobatics_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Animal Handling " />
+                        <TextBlock Text="(WIS): " />
+                        <TextBox x:Name="animal_handling_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="animal_handling_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Arcana " />
+                        <TextBlock Text="(INT): " />
+                        <TextBox x:Name="arcana_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="arcana_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Athletics " />
+                        <TextBlock Text="(STR): " />
+                        <TextBox x:Name="athletics_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="athletics_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Deception " />
+                        <TextBlock Text="(CHA): " />
+                        <TextBox x:Name="deception_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="deception_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="History " />
+                        <TextBlock Text="(INT): " />
+                        <TextBox x:Name="history_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="history_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Insight " />
+                        <TextBlock Text="(WIS): " />
+                        <TextBox x:Name="insight_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="insight_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Intimidation " />
+                        <TextBlock Text="(CHA): " />
+                        <TextBox x:Name="intimidation_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="intimidation_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Investigation " />
+                        <TextBlock Text="(INT): " />
+                        <TextBox x:Name="investigation_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="investigation_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Medicine " />
+                        <TextBlock Text="(WIS): " />
+                        <TextBox x:Name="medicine_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="medicine_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Nature " />
+                        <TextBlock Text="(INT): " />
+                        <TextBox x:Name="nature_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="nature_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Perception " />
+                        <TextBlock Text="(WIS): " />
+                        <TextBox x:Name="perception_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="perception_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Performance " />
+                        <TextBlock Text="(CHA): " />
+                        <TextBox x:Name="performance_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="performance_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Persuasion " />
+                        <TextBlock Text="(CHA): " />
+                        <TextBox x:Name="persuasion_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="persuasion_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Religion " />
+                        <TextBlock Text="(WIS): " />
+                        <TextBox x:Name="religion_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="religion_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Sleight of Hand " />
+                        <TextBlock Text="(DEX): " />
+                        <TextBox x:Name="sleight_of_hand_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="sleight_of_hand_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Stealth " />
+                        <TextBlock Text="(DEX): " />
+                        <TextBox x:Name="stealth_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="stealth_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+                    <DockPanel>
+                        <TextBlock Text="Survival " />
+                        <TextBlock Text="(WIS): " />
+                        <TextBox x:Name="survival_score" Text="placeholder" Background="Transparent" IsReadOnly="True" />
+                        <TextBox x:Name="survival_prof" Text="Prof" Visibility="Hidden" Background="Transparent" IsReadOnly="True" />
+                    </DockPanel>
+
+
                     <TextBlock Text="Saving throws" />
                     <DockPanel>
                         <TextBlock Text="Strength Saving Throws: " />
@@ -167,15 +302,9 @@
                     <StackPanel x:Name="profficiences_tools">
 
                     </StackPanel>
-                    <StackPanel x:Name="profficiences_skills">
+                    <StackPanel x:Name="profficiences_languages">
 
                     </StackPanel>
-                    
-
-                    <DockPanel>
-                        <TextBlock Text="x: " />
-                        <TextBox x:Name="x" Text="placeholder" />
-                    </DockPanel>
                 </StackPanel>
             </ScrollViewer>
         </Grid>
