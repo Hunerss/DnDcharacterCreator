@@ -213,6 +213,7 @@ namespace DnDcharacterCreator.UserControls
                 { 5, 8 },  // Monk
                 { 6, 10 }, // Paladin
                 { 5, 8 },  // Rogue
+                { 4, 6 },  // Sorcerer
                 { 5, 8 },  // Warlock
                 { 4, 6 }   // Wizard
             };
@@ -228,8 +229,9 @@ namespace DnDcharacterCreator.UserControls
                 "Monk" => 5,
                 "Paladin" => 6,
                 "Rogue" => 7,
-                "Warlock" => 8,
-                "Wizard" => 9,
+                "Sorcerer" => 8,
+                "Warlock" => 9,
+                "Wizard" => 10,
                 _ => -1,
             };
             string btn_name = ((Button)sender).Name;
