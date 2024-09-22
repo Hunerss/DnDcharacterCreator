@@ -193,14 +193,14 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Background, Description and Values" Style="{StaticResource Header}"/>
-        <ScrollViewer Grid.Row="1">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*" />
-                    <ColumnDefinition Width="6*" />
-                    <ColumnDefinition Width="3*" />
-                </Grid.ColumnDefinitions>
+        <TextBlock Text="Background, Description and Values" Style="{StaticResource Header}" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="1">
                 <StackPanel Grid.Column="1" HorizontalAlignment="Center">
                     <TextBlock Text="Select Alignment:" Margin="0,0,0,5" />
                     <ComboBox x:Name="AlignmentComboBox" Width="200">
@@ -235,20 +235,20 @@
                     <TextBlock Text="Write something about your character" Margin="10,20,0,5" />
                     <TextBlock Text="Description" Margin="10,10,0,5" />
                     <TextBox x:Name="description" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Personality Traits" Margin="10,20,0,5"/>
+                    <TextBlock Text="Personality Traits" Margin="10,20,0,5" />
                     <TextBox x:Name="personality" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Ideals" Margin="10,20,0,5"/>
+                    <TextBlock Text="Ideals" Margin="10,20,0,5" />
                     <TextBox x:Name="ideals" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Bonds" Margin="10,20,0,5"/>
+                    <TextBlock Text="Bonds" Margin="10,20,0,5" />
                     <TextBox x:Name="bonds" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Flaws" Margin="10,20,0,5"/>
+                    <TextBlock Text="Flaws" Margin="10,20,0,5" />
                     <TextBox x:Name="flaws" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="About" Margin="10,20,0,5"/>
+                    <TextBlock Text="About" Margin="10,20,0,5" />
                     <TextBox x:Name="about" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
 
-                    <Button x:Name="go" Content="Finish" Click="go_Click" Margin="15"/>
+                    <Button x:Name="go" Content="Finish" Click="go_Click" Margin="15" />
                 </StackPanel>
-            </Grid>
-        </ScrollViewer>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </UserControl>
