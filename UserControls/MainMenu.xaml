@@ -58,7 +58,7 @@
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                <Button Name="new_character" Content="Create New Character" Click="new_character_Click">
+                <Button Name="new_character" Content="Create New Character" Click="New_character_Click">
                     <Button.Foreground>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="Black"/>
@@ -67,7 +67,7 @@
                         </LinearGradientBrush>
                     </Button.Foreground>
                 </Button>
-                <Button Name="load_character" Content="Load Old Character" Click="load_character_Click" Margin="0 50 0 0"/>
+                <Button Name="load_character" Content="Load Old Character" Click="Load_character_Click" Margin="0 50 0 0"/>
             </StackPanel>
         </Grid>
     </Grid>
