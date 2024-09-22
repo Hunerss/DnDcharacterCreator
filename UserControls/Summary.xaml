@@ -7,6 +7,119 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="9*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Your DnD Character" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="1">
+                <StackPanel>
+                    <TextBlock Text="Chracter Name" />
+                    <DockPanel>
+                        <TextBlock Text="Name: " />
+                        <TextBlock x:Name="name" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Race: " />
+                        <TextBlock x:Name="race" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Class: " />
+                        <TextBlock x:Name="class" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Sub-class: " />
+                        <TextBlock x:Name="subclass" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="HitPoints: " />
+                        <TextBlock x:Name="hitpoints" Text="placeholder" />
+                    </DockPanel>
+                    <StackPanel x:Name="spellcastingContainer">
+                        <DockPanel>
+                            <TextBlock Text="Spellcasting Ability: " />
+                            <TextBlock x:Name="spellcastingAbility" Text="placeholder" />
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Spellcasting Bonus: " />
+                            <TextBlock x:Name="spellcastingBonus" Text="placeholder" />
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Text="Spell DC: " />
+                            <TextBlock x:Name="spellDC" Text="placeholder" />
+                        </DockPanel>
+                    </StackPanel>
+                    <TextBlock Text="Stats" />
+                    <DockPanel>
+                        <TextBlock Text="Strength: " />
+                        <TextBlock x:Name="strength" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Dexterity: " />
+                        <TextBlock x:Name="dexterity" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Constitution: " />
+                        <TextBlock x:Name="constitution" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Intelligence: " />
+                        <TextBlock x:Name="intelligence" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Wisdom: " />
+                        <TextBlock x:Name="wisdom" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Charisma: " />
+                        <TextBlock x:Name="charisma" Text="placeholder" />
+                    </DockPanel>
+                    
+                    
+                    <DockPanel>
+                        <TextBlock Text="Alignment: " />
+                        <TextBlock x:Name="alignment" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Background: " />
+                        <TextBlock x:Name="background" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Description: " />
+                        <TextBlock x:Name="description" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Ideals: " />
+                        <TextBlock x:Name="ideals" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Bonds: " />
+                        <TextBlock x:Name="bonds" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Flaws: " />
+                        <TextBlock x:Name="flaws" Text="placeholder" />
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="About: " />
+                        <TextBlock x:Name="about" Text="placeholder" />
+                    </DockPanel>
+                    
+                    <!--Profficiences-->
+                    
+                    
+                    <DockPanel>
+                        <TextBlock Text="x: " />
+                        <TextBlock x:Name="x" Text="placeholder" />
+                    </DockPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </UserControl>
