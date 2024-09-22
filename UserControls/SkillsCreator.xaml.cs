@@ -1,6 +1,11 @@
 ﻿using DnDcharacterCreator.Classes;
+using Microsoft.Win32;
+using System.Diagnostics.Metrics;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml.Serialization;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DnDcharacterCreator.UserControls
 {
@@ -40,10 +45,13 @@ namespace DnDcharacterCreator.UserControls
 
         private void SkillChecked(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("Checked");
             if (currentSelections < maxProficiencies)
             {
                 currentSelections++;
                 UpdateProficiencyCount();
+                if (currentSelections == 3)
+                    BlockSkills();
             }
             else
             {
@@ -58,8 +66,11 @@ namespace DnDcharacterCreator.UserControls
 
         private void SkillUnchecked(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine("Unchecked");
             currentSelections--;
             UpdateProficiencyCount();
+            if (currentSelections < 3)
+                UnblockAllSkills();
         }
 
         private void UpdateProficiencyCount()
@@ -89,25 +100,245 @@ namespace DnDcharacterCreator.UserControls
             }
         }
 
-        public void SetCharacterClass(Character character)
+        public void AutoInsertLanguages()
         {
-            AutoSelectSkills(character.Class);
+            switch (character.Race)
+            {
+                case "Human":
+                    language_2.IsReadOnly = false;
+                    break;
+                case "Elf":
+                    language_2.Text = "Elvish";
+                    break;
+                case "Dwarf":
+                    language_2.Text = "Dwarvish";
+                    break;
+                case "Halfling":
+                    language_2.Text = "Halfling";
+                    break;
+                case "Dragonborn":
+                    language_2.Text = "Draconic";
+                    break;
+                case "Gnome":
+                    language_2.Text = "Gnomish";
+                    break;
+                case "Half-Elf":
+                    language_2.Text = "Elvish";
+                    break;
+                case "Half-Orc":
+                    language_2.Text = "Orc";
+                    break;
+                case "Tiefling":
+                    language_2.Text = "Infernal";
+                    break;
+                case "Aasimar":
+                    language_2.Text = "Celestial";
+                    break;
+                default:
+                    break;
+            }
         }
 
-        private void go_Click(object sender, RoutedEventArgs e)
+        public void ShowLanguages()
         {
-            /*ComboBoxItem cbi = AlignmentComboBox.SelectedItem as ComboBoxItem;
+            if (character.Race == "Half-Elf" && (character.Background == "Acolyte" || character.Background == "Sage"))
+            {
+                language_3.Visibility = Visibility.Visible;
+                language_4.Visibility = Visibility.Visible;
+                language_5.Visibility = Visibility.Visible;
+            }
+            else if (character.Background == "Acolyte" || character.Background == "Sage")
+            {
+                language_3.Visibility = Visibility.Visible;
+                language_4.Visibility = Visibility.Visible;
+            }
+            else if (character.Race == "Half-Elf")
+            {
+                language_3.Visibility = Visibility.Visible;
+            }
+        }
 
-            character.Alignment = cbi.Content.ToString();
-            cbi = BackgroundComboBox.SelectedItem as ComboBoxItem;
-            character.Background = cbi.Content.ToString();
-            character.Description = description.Text;
-            character.PersonalityTraits = personality.Text;
-            character.Ideals = ideals.Text;
-            character.Bonds = bonds.Text;
-            character.Flaws = flaws.Text;
-            character.About = about.Text;
-            window.frame.NavigationService.Navigate(new SkillsCreator(window, character));*/
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            AutoSelectSkills(character.Class);
+            ShowLanguages();
+            AutoInsertLanguages();
+        }
+
+        private void ResetItems(string category)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                GetCheckBox(category, i).IsEnabled = true;
+            }
+        }
+
+        private void ItemChecked(object sender, RoutedEventArgs e)
+        {
+            string name = ((CheckBox)sender).Name;
+            string category = name[..^2];
+            int index = int.Parse(name[^1..]);
+
+            DisableAllItems(category);
+            EnableItem(category, index);
+        }
+
+        private void ItemUnchecked(object sender, RoutedEventArgs e)
+        {
+            string name = ((CheckBox)sender).Name;
+            string category = name[..^2];
+
+            ResetItems(category);
+        }
+
+        private void DisableAllItems(string category)
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                GetCheckBox(category, i).IsEnabled = false;
+            }
+        }
+
+        private void EnableItem(string category, int index)
+        {
+            GetCheckBox(category, index).IsEnabled = true;
+        }
+
+        private CheckBox GetCheckBox(string category, int index)
+        {
+            return category switch
+            {
+                "weapon" => (CheckBox)FindName($"weapon_{index}"),
+                "armor" => (CheckBox)FindName($"armor_{index}"),
+                "packs" => (CheckBox)FindName($"packs_{index}"),
+                "tools" => (CheckBox)FindName($"tools_{index}"),
+                _ => throw new ArgumentException("Unknown category")
+            };
+        }
+
+        private void BlockSkills()
+        {
+            if(AcrobaticsCheckBox.IsChecked != true)
+                AcrobaticsCheckBox.IsEnabled = false;
+            if (AnimalHandlingCheckBox.IsChecked != true)
+                AnimalHandlingCheckBox.IsEnabled = false;
+            if (ArcanaCheckBox.IsChecked != true)
+                ArcanaCheckBox.IsEnabled = false;
+            if (AthleticsCheckBox.IsChecked != true)
+                AthleticsCheckBox.IsEnabled = false;
+            if (DeceptionCheckBox.IsChecked != true)
+                DeceptionCheckBox.IsEnabled = false;
+            if (HistoryCheckBox.IsChecked != true)
+                HistoryCheckBox.IsEnabled = false;
+            if (InsightCheckBox.IsChecked != true)
+                InsightCheckBox.IsEnabled = false;
+            if (IntimidationCheckBox.IsChecked != true)
+                IntimidationCheckBox.IsEnabled = false;
+            if (InvestigationCheckBox.IsChecked != true)
+                InvestigationCheckBox.IsEnabled = false;
+            if (MedicineCheckBox.IsChecked != true)
+                MedicineCheckBox.IsEnabled = false;
+            if (NatureCheckBox.IsChecked != true)
+                NatureCheckBox.IsEnabled = false;
+            if (PerceptionCheckBox.IsChecked != true)
+                PerceptionCheckBox.IsEnabled = false;
+            if (PerformanceCheckBox.IsChecked != true)
+                PerformanceCheckBox.IsEnabled = false;
+            if (PersuasionCheckBox.IsChecked != true)
+                PersuasionCheckBox.IsEnabled = false;
+            if (ReligionCheckBox.IsChecked != true)
+                ReligionCheckBox.IsEnabled = false;
+            if (SleightOfHandCheckBox.IsChecked != true)
+                SleightOfHandCheckBox.IsEnabled = false;
+            if (StealthCheckBox.IsChecked != true)
+                StealthCheckBox.IsEnabled = false;
+            if (SurvivalCheckBox.IsChecked != true)
+                SurvivalCheckBox.IsEnabled = false;
+        }
+
+        private void UnblockAllSkills()
+        {
+            AcrobaticsCheckBox.IsEnabled = true;
+            AnimalHandlingCheckBox.IsEnabled = true;
+            ArcanaCheckBox.IsEnabled = true;
+            AthleticsCheckBox.IsEnabled = true;
+            DeceptionCheckBox.IsEnabled = true;
+            HistoryCheckBox.IsEnabled = true;
+            InsightCheckBox.IsEnabled = true;
+            IntimidationCheckBox.IsEnabled = true;
+            InvestigationCheckBox.IsEnabled = true;
+            MedicineCheckBox.IsEnabled = true;
+            NatureCheckBox.IsEnabled = true;
+            PerceptionCheckBox.IsEnabled = true;
+            PerformanceCheckBox.IsEnabled = true;
+            PersuasionCheckBox.IsEnabled = true;
+            ReligionCheckBox.IsEnabled = true;
+            SleightOfHandCheckBox.IsEnabled = true;
+            StealthCheckBox.IsEnabled = true;
+            SurvivalCheckBox.IsEnabled = true;
+        }
+
+        private string[] GetSelectedSkillsAsArray(StackPanel stc)
+        {
+            List<string> selectedSkills = [];
+
+            foreach (var child in stc.Children)
+            {
+                if (child is CheckBox checkBox && checkBox.IsChecked == true)
+                    selectedSkills.Add(checkBox.Content.ToString());
+            }
+
+            return selectedSkills.ToArray();
+        }
+
+        private List<string> GetSelectedSkillsAsList(StackPanel stc)
+        {
+            List<string> selectedSkills = [];
+
+            foreach (var child in stc.Children)
+            {
+                if (child is CheckBox checkBox && checkBox.IsChecked == true)
+                    selectedSkills.Add(checkBox.Content.ToString());
+            }
+
+            return selectedSkills;
+        }
+        private void Go_Click(object sender, RoutedEventArgs e)
+        {
+            character.Skills = GetSelectedSkillsAsArray(SkillsStackPanel);
+            Inventory inventory = new()
+            {
+                Gold = 50,
+                Items = GetSelectedSkillsAsList(ItemsStackPanel)
+            };
+            character.Inventory = inventory;
+
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "DnDCharacterCreator");
+
+            if (!Directory.Exists(folderPath))
+                Directory.CreateDirectory(folderPath);
+
+            SaveFileDialog saveFileDialog1 = new()
+            {
+                Filter = "XML File|*.xml",
+                Title = "Save to File",
+                InitialDirectory = folderPath
+            };
+
+            if (saveFileDialog1.ShowDialog() == true)
+            {
+                try
+                {
+                    XmlSerializer serializer = new(typeof(Character));
+                    using StreamWriter writer = new(saveFileDialog1.FileName);
+                    serializer.Serialize(writer, character);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error saving file: {ex.Message}");
+                }
+            }
+            window.frame.NavigationService.Navigate(new Summary(window, character));
         }
     }
 }
