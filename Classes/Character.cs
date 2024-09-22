@@ -15,6 +15,8 @@ namespace DnDcharacterCreator.Classes
         public string SubClass { get; set; }
         [XmlElement("HitPoints")]
         public int HitPoints { get; set; }
+        [XmlElement("Proficiency")]
+        public int Proficiency { get; set; }
         [XmlElement("Spellcasting")]
         public string Spellcasting { get; set; }
         [XmlElement("Stats")]
@@ -42,5 +44,6 @@ namespace DnDcharacterCreator.Classes
         public string[] Skills { get; set; }
         [XmlElement("Inventory")]
         public Inventory Inventory { get; set; }
+        public Proficiencies Proficiencies { get; set; }
     }
 }

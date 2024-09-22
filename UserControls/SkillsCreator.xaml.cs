@@ -303,6 +303,101 @@ namespace DnDcharacterCreator.UserControls
 
             return selectedSkills;
         }
+
+        private Proficiencies GetProficiencies(string className)
+        {
+            Proficiencies proficiency = new();
+            switch (className)
+            {
+                case "Barbarian":
+                    proficiency.Weapons = new[] { "Greataxe", "Longsword" };
+                    proficiency.Armor = new[] { "Light Armor", "Medium Armor" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                case "Bard":
+                    proficiency.Weapons = new[] { "Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords" };
+                    proficiency.Armor = new[] { "Light Armor" };
+                    proficiency.Tools = new[] { "Three Musical Instruments" };
+                    break;
+
+                case "Cleric":
+                    proficiency.Weapons = new[] { "Simple Weapons", "Warhammer" };
+                    proficiency.Armor = new[] { "Light Armor", "Medium Armor", "Shields" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                case "Druid":
+                    proficiency.Weapons = new[] { "Clubs", "Darts", "Javelins", "Quarterstaffs", "Scimitars" };
+                    proficiency.Armor = new[] { "Light Armor", "Medium Armor", "Shields" };
+                    proficiency.Tools = new[] { "Herbalism Kit" };
+                    break;
+
+                case "Fighter":
+                    proficiency.Weapons = new[] { "Simple Weapons", "Martial Weapons" };
+                    proficiency.Armor = new[] { "All Armor", "Shields" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                case "Monk":
+                    proficiency.Weapons = new[] { "Simple Weapons", "Shortswords" };
+                    proficiency.Armor = new[] { "None" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                case "Paladin":
+                    proficiency.Weapons = new[] { "Simple Weapons", "Martial Weapons" };
+                    proficiency.Armor = new[] { "All Armor", "Shields" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                case "Rogue":
+                    proficiency.Weapons = new[] { "Simple Weapons", "Hand Crossbows", "Longswords", "Rapiers", "Shortswords" };
+                    proficiency.Armor = new[] { "Light Armor" };
+                    proficiency.Tools = new[] { "Thieves' Tools" };
+                    break;
+
+                case "Sorcerer":
+                    proficiency.Weapons = new[] { "Simple Weapons" };
+                    proficiency.Armor = new[] { "Light Armor" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                case "Warlock":
+                    proficiency.Weapons = new[] { "Simple Weapons" };
+                    proficiency.Armor = new[] { "Light Armor" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                case "Wizard":
+                    proficiency.Weapons = new[] { "Daggers", "Darts", "Quarterstaffs", "Slings" };
+                    proficiency.Armor = new[] { "None" };
+                    proficiency.Tools = new[] { "None" };
+                    break;
+
+                default:
+                    Console.WriteLine("Error");
+                    break;
+            }
+            return proficiency;
+        }
+
+        private string[] GetLangauges()
+        {
+            List<string> list = new();
+            if(language_1.Text!="")
+                list.Add(language_1.Text);
+            if (language_2.Text != "")
+                list.Add(language_2.Text);
+            if (language_3.Text != "")
+                list.Add(language_3.Text);
+            if (language_4.Text != "")
+                list.Add(language_4.Text);
+            if (language_5.Text != "")
+                list.Add(language_5.Text);
+            return list.ToArray();
+        }
+
         private void Go_Click(object sender, RoutedEventArgs e)
         {
             character.Skills = GetSelectedSkillsAsArray(SkillsStackPanel);
@@ -312,6 +407,8 @@ namespace DnDcharacterCreator.UserControls
                 Items = GetSelectedSkillsAsList(ItemsStackPanel)
             };
             character.Inventory = inventory;
+            character.Proficiencies = GetProficiencies(character.Class);
+            character.Proficiencies.Languages = GetLangauges();
 
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "DnDCharacterCreator");
 
