@@ -193,7 +193,7 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
-        <TextBlock Text="Character Background" Style="{StaticResource Header}"/>
+        <TextBlock Text="Background, Description and Values" Style="{StaticResource Header}"/>
         <ScrollViewer Grid.Row="1">
             <Grid>
                 <Grid.ColumnDefinitions>
