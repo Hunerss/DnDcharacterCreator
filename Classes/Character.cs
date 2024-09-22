@@ -19,6 +19,8 @@ namespace DnDcharacterCreator.Classes
         public string Spellcasting { get; set; }
         [XmlElement("Stats")]
         public Stats Stats { get; set; }
+        [XmlElement("Saving Throws")]
+        public SavingThrows SavingThrows { get; set; }
         [XmlElement("Alignment")]
         public string Alignment { get; set; }
         [XmlElement("Background")]
