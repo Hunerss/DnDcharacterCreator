@@ -106,11 +106,11 @@ namespace DnDcharacterCreator.UserControls
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "College of Glamour" });
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "College of Whispers" });
                     break;
-                case "Wizard":
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Evocation" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Illusion" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Necromancy" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Transmutation" });
+                case "Cleric":
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Life Domain" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "War Domain" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Trickery Domain" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Knowledge Domain" });
                     break;
                 case "Druid":
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Circle of the Moon" });
@@ -118,35 +118,11 @@ namespace DnDcharacterCreator.UserControls
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Circle of Spores" });
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Circle of Stars" });
                     break;
-                case "Rogue":
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Thief" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Assassin" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Arcane Trickster" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Swashbuckler" });
-                    break;
-                case "Paladin":
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Devotion" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Vengeance" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of the Ancients" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Conquest" });
-                    break;
-                case "Cleric":
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Life Domain" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "War Domain" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Trickery Domain" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Knowledge Domain" });
-                    break;
                 case "Fighter":
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Champion" });
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Battle Master" });
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Eldritch Knight" });
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Arcane Archer" });
-                    break;
-                case "Warlock":
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Fiend" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Great Old One" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Hexblade" });
-                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Genie" });
                     break;
                 case "Monk":
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Way of the Open Hand" });
@@ -154,7 +130,44 @@ namespace DnDcharacterCreator.UserControls
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Way of the Four Elements" });
                     SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Way of the Drunken Master" });
                     break;
+                case "Paladin":
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Devotion" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Vengeance" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of the Ancients" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Conquest" });
+                    break;
+                case "Ranger":
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Hunter" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Beast Master" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Gloom Stalker" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Horizon Walker" });
+                    break;
+                case "Rogue":
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Thief" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Assassin" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Arcane Trickster" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Swashbuckler" });
+                    break;
+                case "Sorcerer":
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Draconic Bloodline" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Wild Magic" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Storm Sorcery" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Divine Soul" });
+                    break;
+                case "Warlock":
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Fiend" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Great Old One" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Hexblade" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Genie" });
+                    break;
+                case "Wizard":
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Evocation" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Illusion" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Necromancy" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Transmutation" });
+                    break;
             }
+
             SubclassesComboBox.SelectedIndex = 0;
         }
 
@@ -498,6 +511,8 @@ namespace DnDcharacterCreator.UserControls
                 charisma = Convert.ToInt32(charisma_textbox.Text)
             };
             character.Stats = stats;
+
+            character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text)+ character.Stats.constitution;
             window.frame.NavigationService.Navigate(new BackgroundCreator(window, character));
         }
     }

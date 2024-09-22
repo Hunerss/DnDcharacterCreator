@@ -229,14 +229,16 @@
                     <ComboBox x:Name="ClassesComboBox" Width="200" VerticalAlignment="Top" Margin="10" SelectionChanged="ClassesComboBox_SelectionChanged">
                         <ComboBoxItem Content="Barbarian" />
                         <ComboBoxItem Content="Bard" />
-                        <ComboBoxItem Content="Wizard" />
-                        <ComboBoxItem Content="Druid" />
-                        <ComboBoxItem Content="Rogue" />
-                        <ComboBoxItem Content="Paladin" />
                         <ComboBoxItem Content="Cleric" />
+                        <ComboBoxItem Content="Druid" />
                         <ComboBoxItem Content="Fighter" />
-                        <ComboBoxItem Content="Warlock" />
                         <ComboBoxItem Content="Monk" />
+                        <ComboBoxItem Content="Paladin" />
+                        <ComboBoxItem Content="Ranger" />
+                        <ComboBoxItem Content="Rogue" />
+                        <ComboBoxItem Content="Sorcerer" />
+                        <ComboBoxItem Content="Warlock" />
+                        <ComboBoxItem Content="Wizard" />
                     </ComboBox>
 
                     <!--Sub-class-->
