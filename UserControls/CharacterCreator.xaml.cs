@@ -205,16 +205,16 @@ namespace DnDcharacterCreator.UserControls
         {
             int[,] hitpoints = new int[,]
             {
-                { 7, 12 },
-                { 5, 8 },
-                { 4, 6 },
-                { 5, 8 },
-                { 5, 8 },
-                { 6, 10 },
-                { 5, 8 },
-                { 6, 10 },
-                { 5, 8 },
-                { 5, 8 }
+                { 7, 12 }, // Barbarian
+                { 5, 8 },  // Bard
+                { 5, 8 },  // Cleric
+                { 5, 8 },  // Druid
+                { 6, 10 }, // Fighter
+                { 5, 8 },  // Monk
+                { 6, 10 }, // Paladin
+                { 5, 8 },  // Rogue
+                { 5, 8 },  // Warlock
+                { 4, 6 }   // Wizard
             };
             ComboBoxItem comboBoxItem = ClassesComboBox.SelectedItem as ComboBoxItem;
             string selectedClass = comboBoxItem.Content.ToString();
@@ -222,14 +222,14 @@ namespace DnDcharacterCreator.UserControls
             {
                 "Barbarian" => 0,
                 "Bard" => 1,
-                "Wizard" => 2,
+                "Cleric" => 2,
                 "Druid" => 3,
-                "Rogue" => 4,
-                "Paladin" => 5,
-                "Cleric" => 6,
-                "Fighter" => 7,
+                "Fighter" => 4,
+                "Monk" => 5,
+                "Paladin" => 6,
+                "Rogue" => 7,
                 "Warlock" => 8,
-                "Monk" => 9,
+                "Wizard" => 9,
                 _ => -1,
             };
             string btn_name = ((Button)sender).Name;
