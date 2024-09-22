@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DnDcharacterCreator.Classes
 {
-    class Inventory
+    public class Inventory
     {
         public int Gold {  get; set; }
         public List<string> Items { get; set; }
