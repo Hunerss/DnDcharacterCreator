@@ -503,16 +503,16 @@ namespace DnDcharacterCreator.UserControls
 
             Stats stats = new()
             {
-                strength = Convert.ToInt32(strength_textbox.Text),
-                dexterity = Convert.ToInt32(dexterity_textbox.Text),
-                constitution = Convert.ToInt32(constitution_textbox.Text),
-                inteligence = Convert.ToInt32(inteligence_textbox.Text),
-                wisdom = Convert.ToInt32(wisdom_textbox.Text),
-                charisma = Convert.ToInt32(charisma_textbox.Text)
+                Strength = Convert.ToInt32(strength_textbox.Text),
+                Dexterity = Convert.ToInt32(dexterity_textbox.Text),
+                Constitution = Convert.ToInt32(constitution_textbox.Text),
+                Intelligence = Convert.ToInt32(inteligence_textbox.Text),
+                Wisdom = Convert.ToInt32(wisdom_textbox.Text),
+                Charisma = Convert.ToInt32(charisma_textbox.Text)
             };
             character.Stats = stats;
 
-            character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text)+ character.Stats.constitution;
+            character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text)+ character.Stats.Constitution;
             window.frame.NavigationService.Navigate(new BackgroundCreator(window, character));
         }
     }
