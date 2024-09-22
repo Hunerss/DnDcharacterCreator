@@ -95,66 +95,67 @@ namespace DnDcharacterCreator.UserControls
             switch (selectedClass)
             {
                 case "Barbarian":
-                    SubclassesComboBox.Items.Add("Berserker");
-                    SubclassesComboBox.Items.Add("Totem Warrior");
-                    SubclassesComboBox.Items.Add("Ancestral Guardian");
-                    SubclassesComboBox.Items.Add("Storm Herald");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Berserker" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Totem Warrior" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Ancestral Guardian" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Storm Herald" });
                     break;
                 case "Bard":
-                    SubclassesComboBox.Items.Add("College of Lore");
-                    SubclassesComboBox.Items.Add("College of Valor");
-                    SubclassesComboBox.Items.Add("College of Glamour");
-                    SubclassesComboBox.Items.Add("College of Whispers");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "College of Lore" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "College of Valor" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "College of Glamour" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "College of Whispers" });
                     break;
                 case "Wizard":
-                    SubclassesComboBox.Items.Add("School of Evocation");
-                    SubclassesComboBox.Items.Add("School of Illusion");
-                    SubclassesComboBox.Items.Add("School of Necromancy");
-                    SubclassesComboBox.Items.Add("School of Transmutation");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Evocation" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Illusion" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Necromancy" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "School of Transmutation" });
                     break;
                 case "Druid":
-                    SubclassesComboBox.Items.Add("Circle of the Moon");
-                    SubclassesComboBox.Items.Add("Circle of the Land");
-                    SubclassesComboBox.Items.Add("Circle of Spores");
-                    SubclassesComboBox.Items.Add("Circle of Stars");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Circle of the Moon" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Circle of the Land" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Circle of Spores" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Circle of Stars" });
                     break;
                 case "Rogue":
-                    SubclassesComboBox.Items.Add("Thief");
-                    SubclassesComboBox.Items.Add("Assassin");
-                    SubclassesComboBox.Items.Add("Arcane Trickster");
-                    SubclassesComboBox.Items.Add("Swashbuckler");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Thief" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Assassin" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Arcane Trickster" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Swashbuckler" });
                     break;
                 case "Paladin":
-                    SubclassesComboBox.Items.Add("Oath of Devotion");
-                    SubclassesComboBox.Items.Add("Oath of Vengeance");
-                    SubclassesComboBox.Items.Add("Oath of the Ancients");
-                    SubclassesComboBox.Items.Add("Oath of Conquest");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Devotion" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Vengeance" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of the Ancients" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Oath of Conquest" });
                     break;
                 case "Cleric":
-                    SubclassesComboBox.Items.Add("Life Domain");
-                    SubclassesComboBox.Items.Add("War Domain");
-                    SubclassesComboBox.Items.Add("Trickery Domain");
-                    SubclassesComboBox.Items.Add("Knowledge Domain");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Life Domain" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "War Domain" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Trickery Domain" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Knowledge Domain" });
                     break;
                 case "Fighter":
-                    SubclassesComboBox.Items.Add("Champion");
-                    SubclassesComboBox.Items.Add("Battle Master");
-                    SubclassesComboBox.Items.Add("Eldritch Knight");
-                    SubclassesComboBox.Items.Add("Arcane Archer");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Champion" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Battle Master" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Eldritch Knight" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Arcane Archer" });
                     break;
                 case "Warlock":
-                    SubclassesComboBox.Items.Add("The Fiend");
-                    SubclassesComboBox.Items.Add("The Great Old One");
-                    SubclassesComboBox.Items.Add("The Hexblade");
-                    SubclassesComboBox.Items.Add("The Genie");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Fiend" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Great Old One" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Hexblade" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "The Genie" });
                     break;
                 case "Monk":
-                    SubclassesComboBox.Items.Add("Way of the Open Hand");
-                    SubclassesComboBox.Items.Add("Way of Shadow");
-                    SubclassesComboBox.Items.Add("Way of the Four Elements");
-                    SubclassesComboBox.Items.Add("Way of the Drunken Master");
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Way of the Open Hand" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Way of Shadow" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Way of the Four Elements" });
+                    SubclassesComboBox.Items.Add(new ComboBoxItem { Content = "Way of the Drunken Master" });
                     break;
             }
+            SubclassesComboBox.SelectedIndex = 0;
         }
 
         private void ShowSpellcastingAbilityForClass(string selectedClass)
@@ -187,7 +188,7 @@ namespace DnDcharacterCreator.UserControls
             }
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             int[,] hitpoints = new int[,]
             {
@@ -227,7 +228,7 @@ namespace DnDcharacterCreator.UserControls
                 Console.WriteLine("Error");
         }
 
-        private void ability_scores_DropDownClosed(object sender, EventArgs e)
+        private void Ability_scores_DropDownClosed(object sender, EventArgs e)
         {
             ComboBoxItem comboBoxItem = ability_scores.SelectedItem as ComboBoxItem;
             if (comboBoxItem.Name == "custom")
@@ -241,7 +242,7 @@ namespace DnDcharacterCreator.UserControls
             }
         }
 
-        private void add_Click(object sender, RoutedEventArgs e)
+        private void Add_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             TextBox associatedTextBox = GetAssociatedTextBox(button);
@@ -272,7 +273,7 @@ namespace DnDcharacterCreator.UserControls
             }
         }
 
-        private void remove_Click(object sender, RoutedEventArgs e)
+        private void Remove_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             TextBox associatedTextBox = GetAssociatedTextBox(button);
@@ -481,16 +482,12 @@ namespace DnDcharacterCreator.UserControls
             };
             cbi = ClassesComboBox.SelectedItem as ComboBoxItem;
             character.Class = cbi?.Content?.ToString();
+
             cbi = SubclassesComboBox.SelectedItem as ComboBoxItem;
-            if (cbi != null && !string.IsNullOrEmpty(cbi.Content?.ToString()))
-                character.SubClass = cbi.Content.ToString();
-            else
-                character.SubClass = "Error in saving";
-            Console.WriteLine(character.SubClass);
-            if (spellcasting_ability.Text != "IDK")
-                character.Spellcasting = spellcasting_ability.Text;
-            else
-                character.Spellcasting = "NaN";
+            character.SubClass = cbi?.Content?.ToString();
+
+            character.Spellcasting = spellcasting_ability.Text != "IDK" ? spellcasting_ability.Text : "NaN";
+
             Stats stats = new()
             {
                 strength = Convert.ToInt32(strength_textbox.Text),
