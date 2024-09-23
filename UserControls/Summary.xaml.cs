@@ -44,13 +44,13 @@ namespace DnDcharacterCreator.UserControls
                 textBox.IsReadOnly = true;
         }
 
-        private void addItem_Click(object sender, RoutedEventArgs e)
+        private void AddItem_Click(object sender, RoutedEventArgs e)
         {
             ModifyProf modifyProf = new(this, "Add", false);
             modifyProf.Show();
         }
 
-        private void removeItem_Click(object sender, RoutedEventArgs e)
+        private void RemoveItem_Click(object sender, RoutedEventArgs e)
         {
             ModifyProf modifyProf = new(this, "Remove", false);
             modifyProf.Show();

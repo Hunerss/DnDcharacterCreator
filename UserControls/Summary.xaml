@@ -327,8 +327,8 @@
                 <MenuItem x:Name="removeProf" Header="Remove Proficiency" Click="RemoveProf_Click" />
             </MenuItem>
             <MenuItem Header="Inventory" Style="{StaticResource MenuIt}">
-                <MenuItem x:Name="addItem" Header="Add Item" Click="addItem_Click" />
-                <MenuItem x:Name="removeItem" Header="Remove Item" Click="removeItem_Click" />
+                <MenuItem x:Name="addItem" Header="Add Item" Click="AddItem_Click" />
+                <MenuItem x:Name="removeItem" Header="Remove Item" Click="RemoveItem_Click" />
             </MenuItem>
         </Menu>
         <TextBlock Grid.Row="1" Text="Your DnD Character" Style="{StaticResource Header}"/>
