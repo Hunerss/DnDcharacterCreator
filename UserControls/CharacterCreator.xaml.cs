@@ -24,7 +24,7 @@ namespace DnDcharacterCreator.UserControls
             window = win;
         }
 
-        private void radnomName_Click(object sender, RoutedEventArgs e)
+        private void RadnomName_Click(object sender, RoutedEventArgs e)
         {
             int v = selectedRace.ToLower() switch
             {

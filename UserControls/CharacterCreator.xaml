@@ -514,7 +514,7 @@
                         <TextBlock Text="What's your character name?" />
                         <DockPanel HorizontalAlignment="Center">
                             <TextBox x:Name="characterName" Text="Character Name" Width="200px" />
-                            <Button x:Name="radnomName" Content="Random" Padding="2px" Click="radnomName_Click" Style="{StaticResource Sq}" />
+                            <Button x:Name="radnomName" Content="Random" Padding="2px" Click="RadnomName_Click" Style="{StaticResource Sq}" />
                         </DockPanel>
 
                         <Border Style="{StaticResource br}"/>
