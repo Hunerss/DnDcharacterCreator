@@ -511,33 +511,6 @@ namespace DnDcharacterCreator.UserControls
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            character = CreateUpdatedCharacter();
-
-
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "DnDCharacterCreator");
-            if (!Directory.Exists(folderPath))
-                Directory.CreateDirectory(folderPath);
-
-            SaveFileDialog saveFileDialog1 = new()
-            {
-                Filter = "XML File|*.xml",
-                Title = "Save to File",
-                InitialDirectory = folderPath
-            };
-
-            if (saveFileDialog1.ShowDialog() == true)
-            {
-                try
-                {
-                    XmlSerializer serializer = new(typeof(Character));
-                    using StreamWriter writer = new(saveFileDialog1.FileName);
-                    serializer.Serialize(writer, character);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error saving file: {ex.Message}");
-                }
-            }
             window.frame.NavigationService.Navigate(new MainMenu(window));
         }
 
@@ -630,6 +603,36 @@ namespace DnDcharacterCreator.UserControls
 
             Console.WriteLine(proficientSkills.Count);
             return [.. proficientSkills];
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            character = CreateUpdatedCharacter();
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "DnDCharacterCreator");
+            if (!Directory.Exists(folderPath))
+                Directory.CreateDirectory(folderPath);
+
+            SaveFileDialog saveFileDialog1 = new()
+            {
+                Filter = "XML File|*.xml",
+                Title = "Save to File",
+                InitialDirectory = folderPath
+            };
+
+            if (saveFileDialog1.ShowDialog() == true)
+            {
+                try
+                {
+                    XmlSerializer serializer = new(typeof(Character));
+                    using StreamWriter writer = new(saveFileDialog1.FileName);
+                    serializer.Serialize(writer, character);
+                    MessageBox.Show("Character Saved");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error saving file: {ex.Message}");
+                }
+            }
         }
     }
 }
