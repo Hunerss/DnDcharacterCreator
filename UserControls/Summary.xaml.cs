@@ -499,6 +499,7 @@ namespace DnDcharacterCreator.UserControls
                     TextBlock textBlock = new()
                     {
                         Text = profs[i],
+                        HorizontalAlignment = HorizontalAlignment.Center,
                     };
                     stackPanel.Children.Add(textBlock);
                 }
@@ -508,6 +509,7 @@ namespace DnDcharacterCreator.UserControls
                 TextBlock textBlock = new()
                 {
                     Text = "None",
+                    HorizontalAlignment = HorizontalAlignment.Center,
                 };
                 stackPanel.Children.Add(textBlock);
             }

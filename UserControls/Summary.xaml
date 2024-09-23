@@ -344,10 +344,6 @@
                         <StackPanel x:Name="items">
 
                         </StackPanel>
-
-                        <Border Style="{StaticResource br}"/>
-
-                        <TextBlock Text="Gold" Style="{StaticResource Header2}" />
                         <DockPanel>
                             <TextBlock Text="Gold: " Width="170px" />
                             <TextBox x:Name="gold" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True" />
