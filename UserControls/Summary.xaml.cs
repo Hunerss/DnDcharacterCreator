@@ -52,7 +52,7 @@ namespace DnDcharacterCreator.UserControls
 
         private void removeItem_Click(object sender, RoutedEventArgs e)
         {
-            ModifyProf modifyProf = new(this, "Add", false);
+            ModifyProf modifyProf = new(this, "Remove", false);
             modifyProf.Show();
         }
 
@@ -75,7 +75,7 @@ namespace DnDcharacterCreator.UserControls
                 "Armors" => new List<string>(character.Proficiencies.Armor),
                 "Tools" => new List<string>(character.Proficiencies.Tools),
                 "Languages" => new List<string>(character.Proficiencies.Languages),
-                "Inventory" => new List<string>(character.Proficiencies.Languages),
+                "Inventory" => new List<string>(character.Inventory.Items),
                 _ => null
             };
 
@@ -92,10 +92,12 @@ namespace DnDcharacterCreator.UserControls
             if (order == "Add")
             {
                 list.Add(properityName);
+                Console.WriteLine("Item/Prof added");
             }
             else if (order == "Remove")
             {
                 list.Remove(properityName);
+                Console.WriteLine("Item/Prof removed");
             }
             else
             {
@@ -128,6 +130,7 @@ namespace DnDcharacterCreator.UserControls
             GeneratePanels(profficiences_armor, "Armors");
             GeneratePanels(profficiences_tools, "Tools");
             GeneratePanels(profficiences_languages, "");
+            GeneratePanels(items, "Inventory");
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -476,7 +479,7 @@ namespace DnDcharacterCreator.UserControls
             else if (kind == "Tools")
                 profs = character.Proficiencies.Tools;
             else if (kind == "Inventory")
-                profs = character.Proficiencies.Tools;
+                profs = [.. character.Inventory.Items];
             else
                 profs = character.Proficiencies.Languages;
 
