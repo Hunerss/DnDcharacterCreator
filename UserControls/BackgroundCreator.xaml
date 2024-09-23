@@ -317,55 +317,66 @@
                 <ColumnDefinition Width="6*" />
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
-            <ScrollViewer Grid.Column="1">
-                <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,20">
-                    <TextBlock Text="Select Alignment:" Margin="0,0,0,5" />
-                    <ComboBox x:Name="AlignmentComboBox" Width="200">
-                        <ComboBoxItem Content="Lawful Good" />
-                        <ComboBoxItem Content="Neutral Good" />
-                        <ComboBoxItem Content="Chaotic Good" />
-                        <ComboBoxItem Content="Lawful Neutral" />
-                        <ComboBoxItem Content="True Neutral" />
-                        <ComboBoxItem Content="Chaotic Neutral" />
-                        <ComboBoxItem Content="Lawful Evil" />
-                        <ComboBoxItem Content="Neutral Evil" />
-                        <ComboBoxItem Content="Chaotic Evil" />
-                    </ComboBox>
+            <Border Grid.Column="1" Padding="10" BorderThickness="10" CornerRadius="20" Margin="0,20,0,20">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <ImageBrush ImageSource="/images/summary_background.png"/>
+                </Border.Background>
+                <ScrollViewer Grid.Column="1">
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Select Alignment:" Margin="0,0,0,5" />
+                        <ComboBox x:Name="AlignmentComboBox" Width="200">
+                            <ComboBoxItem Content="Lawful Good" />
+                            <ComboBoxItem Content="Neutral Good" />
+                            <ComboBoxItem Content="Chaotic Good" />
+                            <ComboBoxItem Content="Lawful Neutral" />
+                            <ComboBoxItem Content="True Neutral" />
+                            <ComboBoxItem Content="Chaotic Neutral" />
+                            <ComboBoxItem Content="Lawful Evil" />
+                            <ComboBoxItem Content="Neutral Evil" />
+                            <ComboBoxItem Content="Chaotic Evil" />
+                        </ComboBox>
 
-                    <TextBlock Text="Select Background:" Margin="10,20,0,5" />
-                    <ComboBox x:Name="BackgroundComboBox" Width="200">
-                        <ComboBoxItem Content="Acolyte" />
-                        <ComboBoxItem Content="Charlatan" />
-                        <ComboBoxItem Content="Criminal" />
-                        <ComboBoxItem Content="Entertainer" />
-                        <ComboBoxItem Content="Folk Hero" />
-                        <ComboBoxItem Content="Guild Artisan" />
-                        <ComboBoxItem Content="Hermit" />
-                        <ComboBoxItem Content="Noble" />
-                        <ComboBoxItem Content="Outlander" />
-                        <ComboBoxItem Content="Sage" />
-                        <ComboBoxItem Content="Sailor" />
-                        <ComboBoxItem Content="Soldier" />
-                        <ComboBoxItem Content="Urchin" />
-                    </ComboBox>
+                        <TextBlock Text="Select Background:" Margin="10,20,0,5" />
+                        <ComboBox x:Name="BackgroundComboBox" Width="200">
+                            <ComboBoxItem Content="Acolyte" />
+                            <ComboBoxItem Content="Charlatan" />
+                            <ComboBoxItem Content="Criminal" />
+                            <ComboBoxItem Content="Entertainer" />
+                            <ComboBoxItem Content="Folk Hero" />
+                            <ComboBoxItem Content="Guild Artisan" />
+                            <ComboBoxItem Content="Hermit" />
+                            <ComboBoxItem Content="Noble" />
+                            <ComboBoxItem Content="Outlander" />
+                            <ComboBoxItem Content="Sage" />
+                            <ComboBoxItem Content="Sailor" />
+                            <ComboBoxItem Content="Soldier" />
+                            <ComboBoxItem Content="Urchin" />
+                        </ComboBox>
 
-                    <TextBlock Text="Write something about your character" Margin="10,20,0,5" Style="{StaticResource Header2}"/>
-                    <TextBlock Text="Description" Margin="10,10,0,5" />
-                    <TextBox x:Name="description" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Personality Traits" Margin="10,20,0,5" />
-                    <TextBox x:Name="personality" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Ideals" Margin="10,20,0,5" />
-                    <TextBox x:Name="ideals" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Bonds" Margin="10,20,0,5" />
-                    <TextBox x:Name="bonds" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="Flaws" Margin="10,20,0,5" />
-                    <TextBox x:Name="flaws" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
-                    <TextBlock Text="About" Margin="10,20,0,5" />
-                    <TextBox x:Name="about" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                        <TextBlock Text="Write something about your character" Margin="10,20,0,5" Style="{StaticResource Header2}" TextWrapping="Wrap"/>
+                        <TextBlock Text="Description" Margin="10,10,0,5" />
+                        <TextBox x:Name="description" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                        <TextBlock Text="Personality Traits" Margin="10,20,0,5" />
+                        <TextBox x:Name="personality" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                        <TextBlock Text="Ideals" Margin="10,20,0,5" />
+                        <TextBox x:Name="ideals" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                        <TextBlock Text="Bonds" Margin="10,20,0,5" />
+                        <TextBox x:Name="bonds" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                        <TextBlock Text="Flaws" Margin="10,20,0,5" />
+                        <TextBox x:Name="flaws" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
+                        <TextBlock Text="About" Margin="10,20,0,5" />
+                        <TextBox x:Name="about" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
 
-                    <Button x:Name="go" Content="Finish" Click="go_Click" Margin="15" />
-                </StackPanel>
-            </ScrollViewer>
+                        <Button x:Name="go" Content="Finish" Click="go_Click" Margin="15" />
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
         </Grid>
     </Grid>
 </UserControl>

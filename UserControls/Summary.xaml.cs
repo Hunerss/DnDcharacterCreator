@@ -41,10 +41,16 @@ namespace DnDcharacterCreator.UserControls
                 medicine_score, medicine_prof, nature_score, nature_prof, perception_score, perception_prof, performance_score, performance_prof, persuasion_score, 
                 persuasion_prof, religion_score, religion_prof, sleight_of_hand_score, sleight_of_hand_prof, stealth_score, stealth_prof, survival_score, survival_prof];
             foreach (TextBox textBox in textBoxes)
-                textBox.IsReadOnly = false;
+                textBox.IsReadOnly = true;
         }
 
         private void AddProf_Click(object sender, RoutedEventArgs e)
+        {
+            ModifyProf modifyProf = new(this);
+            modifyProf.Show();
+        }
+
+        public void something(object data)
         {
 
         }
@@ -381,7 +387,7 @@ namespace DnDcharacterCreator.UserControls
                 survival_prof.Text = "";
             }
             GenerateProficiences(profficiences_weapons, "Weapons");
-            GenerateProficiences(profficiences_armor, "Armor");
+            GenerateProficiences(profficiences_armor, "Armors");
             GenerateProficiences(profficiences_tools, "Tools");
             GenerateProficiences(profficiences_languages, "");
         }
@@ -398,11 +404,23 @@ namespace DnDcharacterCreator.UserControls
                 profs = character.Proficiencies.Tools;
             else
                 profs = character.Proficiencies.Languages;
-            for (int i = 0; i < profs.Length; i++)
+
+            if (profs.Length > 0)
+            {
+                for (int i = 0; i < profs.Length; i++)
+                {
+                    TextBlock textBlock = new()
+                    {
+                        Text = profs[i],
+                    };
+                    stackPanel.Children.Add(textBlock);
+                }
+            }
+            else
             {
                 TextBlock textBlock = new()
                 {
-                    Text = profs[i],
+                    Text = "None",
                 };
                 stackPanel.Children.Add(textBlock);
             }

@@ -243,73 +243,84 @@
                 <ColumnDefinition Width="6*" />
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
-            <ScrollViewer Grid.Column="1">
-                <StackPanel HorizontalAlignment="Center" Margin="0,0,0,20">
-                    <StackPanel x:Name="SkillsStackPanel">
-                        <TextBlock x:Name="ProficiencyCountTextBlock" Text="Choose your skills (3 available)" FontSize="24" />
+            <Border Grid.Column="1" Padding="10" BorderThickness="10" CornerRadius="20" Margin="0,20,0,20">
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+                <Border.Background>
+                    <ImageBrush ImageSource="/images/summary_background.png"/>
+                </Border.Background>
+                <ScrollViewer Grid.Column="1">
+                    <StackPanel HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <StackPanel x:Name="SkillsStackPanel">
+                            <TextBlock x:Name="ProficiencyCountTextBlock" Text="Choose your skills (3 available)" FontSize="24" />
 
-                        <CheckBox x:Name="AcrobaticsCheckBox" Content="Acrobatics" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="AnimalHandlingCheckBox" Content="Animal Handling" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="ArcanaCheckBox" Content="Arcana" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="AthleticsCheckBox" Content="Athletics" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="DeceptionCheckBox" Content="Deception" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="HistoryCheckBox" Content="History" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="InsightCheckBox" Content="Insight" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="IntimidationCheckBox" Content="Intimidation" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="InvestigationCheckBox" Content="Investigation" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="MedicineCheckBox" Content="Medicine" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="NatureCheckBox" Content="Nature" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="PerceptionCheckBox" Content="Perception" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="PerformanceCheckBox" Content="Performance" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="PersuasionCheckBox" Content="Persuasion" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="ReligionCheckBox" Content="Religion" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="SleightOfHandCheckBox" Content="Sleight of Hand" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="StealthCheckBox" Content="Stealth" Checked="SkillChecked" Unchecked="SkillUnchecked" />
-                        <CheckBox x:Name="SurvivalCheckBox" Content="Survival" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="AcrobaticsCheckBox" Content="Acrobatics" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="AnimalHandlingCheckBox" Content="Animal Handling" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="ArcanaCheckBox" Content="Arcana" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="AthleticsCheckBox" Content="Athletics" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="DeceptionCheckBox" Content="Deception" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="HistoryCheckBox" Content="History" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="InsightCheckBox" Content="Insight" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="IntimidationCheckBox" Content="Intimidation" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="InvestigationCheckBox" Content="Investigation" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="MedicineCheckBox" Content="Medicine" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="NatureCheckBox" Content="Nature" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="PerceptionCheckBox" Content="Perception" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="PerformanceCheckBox" Content="Performance" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="PersuasionCheckBox" Content="Persuasion" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="ReligionCheckBox" Content="Religion" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="SleightOfHandCheckBox" Content="Sleight of Hand" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="StealthCheckBox" Content="Stealth" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                            <CheckBox x:Name="SurvivalCheckBox" Content="Survival" Checked="SkillChecked" Unchecked="SkillUnchecked" />
+                        </StackPanel>
+
+                        <TextBlock Text="Insert your languages:" FontSize="24" />
+                        <StackPanel x:Name="languages" HorizontalAlignment="Center">
+                            <TextBox x:Name="language_1" IsReadOnly="True" Text="Common" />
+                            <TextBox x:Name="language_2" IsReadOnly="True" />
+                            <TextBox x:Name="language_3" Visibility="Collapsed" />
+                            <TextBox x:Name="language_4" Visibility="Collapsed" />
+                            <TextBox x:Name="language_5" Visibility="Collapsed" />
+                        </StackPanel>
+
+                        <TextBlock Text="Select your equipment:" FontSize="24" />
+                        <StackPanel x:Name="ItemsStackPanel">
+                            <TextBlock Text="Weapon" FontWeight="Bold" />
+                            <CheckBox x:Name="weapon_1" Content="1 Greataxe" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_2" Content="1 Longsword" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_3" Content="1 Rapier" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_4" Content="1 Shortbow + 10 Arrows" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_5" Content="1 Dagger" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+
+                            <TextBlock Text="Armor" FontWeight="Bold" Margin="0,10,0,0" />
+                            <CheckBox x:Name="armor_1" Content="1 Chain Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_2" Content="1 Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_3" Content="1 Scale Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_4" Content="1 Studded Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_5" Content="1 Hide Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+
+                            <TextBlock Text="Packs" FontWeight="Bold" Margin="0,10,0,0" />
+                            <CheckBox x:Name="packs_1" Content="1 Explorer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_2" Content="1 Burglar's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_3" Content="1 Diplomat's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_4" Content="1 Entertainer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_5" Content="1 Priest's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+
+                            <TextBlock Text="Tools" FontWeight="Bold" Margin="0,10,0,0" />
+                            <CheckBox x:Name="tools_1" Content="1 Thieves' Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_2" Content="1 Artisan's Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_3" Content="1 Musical Instrument " Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_4" Content="1 Herbalism Kit" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_5" Content="1 Alchemist's Supplies" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                        </StackPanel>
+                        <Button x:Name="go" Content="Finish" Click="Go_Click" Margin="0,15,0,0" />
                     </StackPanel>
-
-                    <TextBlock Text="Insert your languages:" FontSize="24" />
-                    <StackPanel x:Name="languages" HorizontalAlignment="Center">
-                        <TextBox x:Name="language_1" IsReadOnly="True" Text="Common" />
-                        <TextBox x:Name="language_2" IsReadOnly="True" />
-                        <TextBox x:Name="language_3" Visibility="Collapsed" />
-                        <TextBox x:Name="language_4" Visibility="Collapsed" />
-                        <TextBox x:Name="language_5" Visibility="Collapsed" />
-                    </StackPanel>
-
-                    <TextBlock Text="Select your equipment:" FontSize="24" />
-                    <StackPanel x:Name="ItemsStackPanel">
-                        <TextBlock Text="Weapon" FontWeight="Bold" />
-                        <CheckBox x:Name="weapon_1" Content="1 Greataxe" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="weapon_2" Content="1 Longsword" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="weapon_3" Content="1 Rapier" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="weapon_4" Content="1 Shortbow + 10 Arrows" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="weapon_5" Content="1 Dagger" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-
-                        <TextBlock Text="Armor" FontWeight="Bold" Margin="0,10,0,0" />
-                        <CheckBox x:Name="armor_1" Content="1 Chain Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="armor_2" Content="1 Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="armor_3" Content="1 Scale Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="armor_4" Content="1 Studded Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="armor_5" Content="1 Hide Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-
-                        <TextBlock Text="Packs" FontWeight="Bold" Margin="0,10,0,0" />
-                        <CheckBox x:Name="packs_1" Content="1 Explorer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="packs_2" Content="1 Burglar's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="packs_3" Content="1 Diplomat's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="packs_4" Content="1 Entertainer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="packs_5" Content="1 Priest's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-
-                        <TextBlock Text="Tools" FontWeight="Bold" Margin="0,10,0,0" />
-                        <CheckBox x:Name="tools_1" Content="1 Thieves' Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="tools_2" Content="1 Artisan's Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="tools_3" Content="1 Musical Instrument " Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="tools_4" Content="1 Herbalism Kit" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                        <CheckBox x:Name="tools_5" Content="1 Alchemist's Supplies" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                    </StackPanel>
-                    <Button x:Name="go" Content="Finish" Click="Go_Click" Margin="0,15,0,0" />
-                </StackPanel>
-            </ScrollViewer>
+                </ScrollViewer>
+            </Border>
         </Grid>
     </Grid>
 </UserControl>
