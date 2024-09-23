@@ -104,7 +104,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.SavingThrows.Strength)
             {
                 strength_sv.Text = (Math.Floor((character.Stats.Strength - 10) / 2.0) + character.Proficiency).ToString();
-                strength_sv_prof.Text = "PROF";
+                strength_sv_prof.Text = "PR";
             }
             else
             {
@@ -115,7 +115,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.SavingThrows.Dexterity)
             {
                 dexterity_sv.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0) + character.Proficiency).ToString();
-                dexterity_sv_prof.Text = "PROF";
+                dexterity_sv_prof.Text = "PR";
             }
             else
             {
@@ -126,7 +126,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.SavingThrows.Constitution)
             {
                 constitution_sv.Text = (Math.Floor((character.Stats.Constitution - 10) / 2.0) + character.Proficiency).ToString();
-                constitution_sv_prof.Text = "PROF";
+                constitution_sv_prof.Text = "PR";
             }
             else
             {
@@ -137,7 +137,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.SavingThrows.Intelligence)
             {
                 intelligence_sv.Text = (Math.Floor((character.Stats.Intelligence - 10) / 2.0) + character.Proficiency).ToString();
-                intelligence_sv_prof.Text = "PROF";
+                intelligence_sv_prof.Text = "PR";
             }
             else
             {
@@ -148,7 +148,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.SavingThrows.Wisdom)
             {
                 wisdom_sv.Text = (Math.Floor((character.Stats.Wisdom - 10) / 2.0) + character.Proficiency).ToString();
-                wisdom_sv_prof.Text = "PROF";
+                wisdom_sv_prof.Text = "PR";
             }
             else
             {
@@ -159,7 +159,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.SavingThrows.Charisma)
             {
                 charisma_sv.Text = (Math.Floor((character.Stats.Charisma - 10) / 2.0) + character.Proficiency).ToString();
-                charisma_sv_prof.Text = "PROF";
+                charisma_sv_prof.Text = "PR";
             }
             else
             {
@@ -181,7 +181,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Acrobatics"))
             {
                 acrobatics_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString();;
-                acrobatics_prof.Text = "PROF";
+                acrobatics_prof.Text = "PR";
             }
             else
             {
@@ -192,7 +192,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Acrobatics"))
             {
                 acrobatics_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString();
-                acrobatics_prof.Text = "PROF";
+                acrobatics_prof.Text = "PR";
             }
             else
             {
@@ -203,7 +203,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Animal Handling"))
             {
                 animal_handling_score.Text = (Math.Floor((character.Stats.Wisdom - 10) / 2.0)).ToString();
-                animal_handling_prof.Text = "PROF";
+                animal_handling_prof.Text = "PR";
             }
             else
             {
@@ -214,7 +214,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Arcana"))
             {
                 arcana_score.Text = (Math.Floor((character.Stats.Intelligence - 10) / 2.0)).ToString();
-                arcana_prof.Text = "PROF";
+                arcana_prof.Text = "PR";
             }
             else
             {
@@ -225,7 +225,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Athletics"))
             {
                 athletics_score.Text = (Math.Floor((character.Stats.Strength - 10) / 2.0)).ToString();
-                athletics_prof.Text = "PROF";
+                athletics_prof.Text = "PR";
             }
             else
             {
@@ -236,7 +236,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Deception"))
             {
                 deception_score.Text = (Math.Floor((character.Stats.Charisma - 10) / 2.0)).ToString();
-                deception_prof.Text = "PROF";
+                deception_prof.Text = "PR";
             }
             else
             {
@@ -247,7 +247,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("History"))
             {
                 history_score.Text = (Math.Floor((character.Stats.Intelligence - 10) / 2.0)).ToString();
-                history_prof.Text = "PROF";
+                history_prof.Text = "PR";
             }
             else
             {
@@ -258,7 +258,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Insight"))
             {
                 insight_score.Text = (Math.Floor((character.Stats.Wisdom - 10) / 2.0)).ToString();
-                insight_prof.Text = "PROF";
+                insight_prof.Text = "PR";
             }
             else
             {
@@ -269,7 +269,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Intimidation"))
             {
                 intimidation_score.Text = (Math.Floor((character.Stats.Charisma - 10) / 2.0)).ToString();
-                intimidation_prof.Text = "PROF";
+                intimidation_prof.Text = "PR";
             }
             else
             {
@@ -280,7 +280,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Investigation"))
             {
                 investigation_score.Text = (Math.Floor((character.Stats.Intelligence - 10) / 2.0)).ToString();
-                investigation_prof.Text = "PROF";
+                investigation_prof.Text = "PR";
             }
             else
             {
@@ -291,7 +291,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Medicine"))
             {
                 medicine_score.Text = (Math.Floor((character.Stats.Wisdom - 10) / 2.0)).ToString();
-                medicine_prof.Text = "PROF";
+                medicine_prof.Text = "PR";
             }
             else
             {
@@ -302,7 +302,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Nature"))
             {
                 nature_score.Text = (Math.Floor((character.Stats.Intelligence - 10) / 2.0)).ToString();
-                nature_prof.Text = "PROF";
+                nature_prof.Text = "PR";
             }
             else
             {
@@ -313,7 +313,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Perception"))
             {
                 perception_score.Text = (Math.Floor((character.Stats.Wisdom - 10) / 2.0)).ToString();
-                perception_prof.Text = "PROF";
+                perception_prof.Text = "PR";
             }
             else
             {
@@ -324,7 +324,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Performance"))
             {
                 performance_score.Text = (Math.Floor((character.Stats.Charisma - 10) / 2.0)).ToString();
-                performance_prof.Text = "PROF";
+                performance_prof.Text = "PR";
             }
             else
             {
@@ -335,7 +335,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Persuasion"))
             {
                 persuasion_score.Text = (Math.Floor((character.Stats.Charisma - 10) / 2.0)).ToString();
-                persuasion_prof.Text = "PROF";
+                persuasion_prof.Text = "PR";
             }
             else
             {
@@ -346,7 +346,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Religion"))
             {
                 religion_score.Text = (Math.Floor((character.Stats.Intelligence - 10) / 2.0)).ToString();
-                religion_prof.Text = "PROF";
+                religion_prof.Text = "PR";
             }
             else
             {
@@ -357,7 +357,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Sleight of Hand"))
             {
                 sleight_of_hand_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString();
-                sleight_of_hand_prof.Text = "PROF";
+                sleight_of_hand_prof.Text = "PR";
             }
             else
             {
@@ -368,7 +368,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Stealth"))
             {
                 stealth_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString();
-                stealth_prof.Text = "PROF";
+                stealth_prof.Text = "PR";
             }
             else
             {
@@ -379,7 +379,7 @@ namespace DnDcharacterCreator.UserControls
             if (character.Skills.Contains("Survival"))
             {
                 survival_score.Text = (Math.Floor((character.Stats.Wisdom - 10) / 2.0)).ToString();
-                survival_prof.Text = "PROF";
+                survival_prof.Text = "PR";
             }
             else
             {

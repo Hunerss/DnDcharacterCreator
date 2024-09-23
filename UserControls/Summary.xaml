@@ -400,144 +400,144 @@
                         <TextBlock Text="Skills" Style="{StaticResource Header2}"/>
 
                         <DockPanel>
-                            <TextBlock Text="Acrobatics (DEX):" Width="250px"/>
+                            <TextBlock Text="Acrobatics (DEX):" Width="220px"/>
                             <TextBox x:Name="acrobatics_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="acrobatics_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="acrobatics_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Animal Handling (WIS):" Width="250px"/>
+                            <TextBlock Text="Animal Handling (WIS):" Width="220px"/>
                             <TextBox x:Name="animal_handling_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="animal_handling_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="animal_handling_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Arcana (INT):" Width="250px"/>
+                            <TextBlock Text="Arcana (INT):" Width="220px"/>
                             <TextBox x:Name="arcana_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="arcana_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="arcana_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Athletics (STR):" Width="250px"/>
+                            <TextBlock Text="Athletics (STR):" Width="220px"/>
                             <TextBox x:Name="athletics_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="athletics_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="athletics_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Deception (CHA):" Width="250px"/>
+                            <TextBlock Text="Deception (CHA):" Width="220px"/>
                             <TextBox x:Name="deception_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="deception_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="deception_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="History (INT):" Width="250px"/>
+                            <TextBlock Text="History (INT):" Width="220px"/>
                             <TextBox x:Name="history_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="history_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="history_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Insight (WIS):" Width="250px"/>
+                            <TextBlock Text="Insight (WIS):" Width="220px"/>
                             <TextBox x:Name="insight_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="insight_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="insight_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Intimidation (CHA):" Width="250px"/>
+                            <TextBlock Text="Intimidation (CHA):" Width="220px"/>
                             <TextBox x:Name="intimidation_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="intimidation_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="intimidation_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Investigation (INT):" Width="250px"/>
+                            <TextBlock Text="Investigation (INT):" Width="220px"/>
                             <TextBox x:Name="investigation_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="investigation_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="investigation_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Medicine (WIS):" Width="250px"/>
+                            <TextBlock Text="Medicine (WIS):" Width="220px"/>
                             <TextBox x:Name="medicine_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="medicine_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="medicine_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Nature (INT):" Width="250px"/>
+                            <TextBlock Text="Nature (INT):" Width="220px"/>
                             <TextBox x:Name="nature_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="nature_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="nature_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Perception (WIS):" Width="250px"/>
+                            <TextBlock Text="Perception (WIS):" Width="220px"/>
                             <TextBox x:Name="perception_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="perception_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="perception_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Performance (CHA): " Width="250px"/>
+                            <TextBlock Text="Performance (CHA): " Width="220px"/>
                             <TextBox x:Name="performance_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="performance_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="performance_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Persuasion (CHA):" Width="250px"/>
+                            <TextBlock Text="Persuasion (CHA):" Width="220px"/>
                             <TextBox x:Name="persuasion_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="persuasion_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="persuasion_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Religion (WIS):" Width="250px"/>
+                            <TextBlock Text="Religion (WIS):" Width="220px"/>
                             <TextBox x:Name="religion_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="religion_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="religion_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Sleight of Hand (DEX):" Width="250px"/>
+                            <TextBlock Text="Sleight of Hand (DEX):" Width="220px"/>
                             <TextBox x:Name="sleight_of_hand_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="sleight_of_hand_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="sleight_of_hand_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Stealth (DEX):" Width="250px"/>
+                            <TextBlock Text="Stealth (DEX):" Width="220px"/>
                             <TextBox x:Name="stealth_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="stealth_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="stealth_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
                         <DockPanel>
-                            <TextBlock Text="Survival (WIS):" Width="250px"/>
+                            <TextBlock Text="Survival (WIS):" Width="220px"/>
                             <TextBox x:Name="survival_score" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="survival_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="survival_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
 
                         <TextBlock Text="Saving throws" Style="{StaticResource Header2}"/>
                         <DockPanel>
-                            <TextBlock Text="Strength Saving Throws: "  Width="270px"/>
+                            <TextBlock Text="Strength Saving Throws: "  Width="220px"/>
                             <TextBox x:Name="strength_sv" Text="placeholder" IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="strength_sv_prof" Text="Prof" Visibility="Hidden" IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="strength_sv_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Text="Dexterity Saving Throws: "  Width="270px"/>
+                            <TextBlock Text="Dexterity Saving Throws: "  Width="220px"/>
                             <TextBox x:Name="dexterity_sv" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="dexterity_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="dexterity_sv_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Text="Constitution Saving Throws: "  Width="270px"/>
+                            <TextBlock Text="Constitution Saving Throws: "  Width="220px"/>
                             <TextBox x:Name="constitution_sv" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="constitution_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="constitution_sv_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Text="Intelligence Saving Throws: "  Width="270px"/>
+                            <TextBlock Text="Intelligence Saving Throws: "  Width="220px"/>
                             <TextBox x:Name="intelligence_sv" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="intelligence_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="intelligence_sv_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Text="Wisdom Saving Throws: "  Width="270px"/>
+                            <TextBlock Text="Wisdom Saving Throws: "  Width="220px"/>
                             <TextBox x:Name="wisdom_sv" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="wisdom_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="wisdom_sv_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Text="Charisma Saving Throws: " Width="270px"/>
+                            <TextBlock Text="Charisma Saving Throws: " Width="220px"/>
                             <TextBox x:Name="charisma_sv" Text="placeholder"   IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <TextBox x:Name="charisma_sv_prof" Text="Prof" Visibility="Hidden"   IsReadOnly="True" Style="{StaticResource SqB}"/>
+                            <TextBox x:Name="charisma_sv_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}"/>
                         </DockPanel>
 
 
