@@ -44,7 +44,7 @@ namespace DnDcharacterCreator
             }
             else
             {
-                profKind = "Item";
+                profKind = "Inventory";
                 summary.GenerateNewProperities(profName, profKind, order,false);
             }
             Close();
