@@ -545,31 +545,31 @@
                         <TextBlock Text="Complex informaions" Style="{StaticResource Header2}"/>
                         <DockPanel>
                             <TextBlock Text="Alignment: " Width="170px"/>
-                            <TextBox x:Name="alignment" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="alignment" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="Background: " Width="170px"/>
-                            <TextBox x:Name="background" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="background" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="Description: " Width="170px"/>
-                            <TextBox x:Name="description" Text="placeholder"   IsReadOnly="True"/>
+                            <TextBox x:Name="description" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="Ideals: " Width="170px"/>
-                            <TextBox x:Name="ideals" Text="placeholder" IsReadOnly="True"/>
+                            <TextBox x:Name="ideals" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="Bonds: " Width="170px"/>
-                            <TextBox x:Name="bonds" Text="placeholder" IsReadOnly="True"/>
+                            <TextBox x:Name="bonds" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="Flaws: " Width="170px"/>
-                            <TextBox x:Name="flaws" Text="placeholder" IsReadOnly="True"/>
+                            <TextBox x:Name="flaws" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True"/>
                         </DockPanel>
                         <DockPanel>
                             <TextBlock Text="About: " Width="170px"/>
-                            <TextBox x:Name="about" Text="placeholder" IsReadOnly="True"/>
+                            <TextBox x:Name="about" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True"/>
                         </DockPanel>
 
                         <!--Profficiences-->
