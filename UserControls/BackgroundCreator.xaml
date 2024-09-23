@@ -1,25 +1,17 @@
-﻿<UserControl x:Class="DnDcharacterCreator.UserControls.BackgroundCreator"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DnDcharacterCreator.UserControls"
-             mc:Ignorable="d" 
-             Loaded="UserControl_Loaded"
-             d:DesignHeight="450" d:DesignWidth="800">
+﻿<UserControl x:Class="DnDcharacterCreator.UserControls.BackgroundCreator" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:DnDcharacterCreator.UserControls" mc:Ignorable="d" Loaded="UserControl_Loaded" d:DesignHeight="450" d:DesignWidth="800">
 
     <UserControl.Resources>
         <Style TargetType="Button">
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="BorderThickness" Value="4"/>
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
             <Setter Property="BorderBrush">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF656565"/>
-                        <GradientStop Color="#FF424242" Offset="1"/>
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -31,9 +23,9 @@
             <Setter Property="Foreground">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FF171717" Offset="1"/>
-                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -46,25 +38,25 @@
         <Style TargetType="Button" x:Key="Sq">
 
 
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="BorderThickness" Value="4"/>
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
             <Setter Property="BorderBrush">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF656565"/>
-                        <GradientStop Color="#FF424242" Offset="1"/>
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
             <Setter Property="Foreground">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FF171717" Offset="1"/>
-                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -87,23 +79,23 @@
 
 
         <Style TargetType="TextBlock">
-            <Setter Property="Padding" Value="5"/>
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
         </Style>
 
         <Style TargetType="TextBox">
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="BorderThickness" Value="4"/>
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
             <Setter Property="BorderBrush">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF656565"/>
-                        <GradientStop Color="#FF424242" Offset="1"/>
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -115,9 +107,9 @@
             <Setter Property="Foreground">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FF171717" Offset="1"/>
-                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -130,16 +122,16 @@
 
 
         <Style TargetType="ComboBoxItem">
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="BorderThickness" Value="4"/>
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
             <Setter Property="BorderBrush">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF656565"/>
-                        <GradientStop Color="#FF424242" Offset="1"/>
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
@@ -151,20 +143,20 @@
             <Setter Property="Foreground">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FF171717" Offset="1"/>
-                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
         </Style>
 
         <Style TargetType="TextBlock" x:Key="Header">
-            <Setter Property="Padding" Value="10"/>
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="32"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="32" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
         </Style>
 
         <!-- COMBO BOX STYLE-->
@@ -172,14 +164,10 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ToggleButton}">
-                        <Border   
-             x:Name="border"   
-             CornerRadius="0,10,10,0"   
-             BorderThickness="0,4,4,4"  
-                            >
+                        <Border x:Name="border" CornerRadius="0,10,10,0" BorderThickness="0,4,4,4">
                             <ContentPresenter />
                             <Border.Background>
-                                <ImageBrush ImageSource="/images/button_background_sq.png"/>
+                                <ImageBrush ImageSource="/images/button_background_sq.png" />
                             </Border.Background>
                             <Border.BorderBrush>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -198,12 +186,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TextBox}">
                         <Grid>
-                            <Border CornerRadius="10,0,0,10"  
-               BorderThickness="4,4,0,4"  
-                                    Padding="10">
-                                <ScrollViewer x:Name="PART_ContentHost"/>
+                            <Border CornerRadius="10,0,0,10" BorderThickness="4,4,0,4" Padding="10">
+                                <ScrollViewer x:Name="PART_ContentHost" />
                                 <Border.Background>
-                                    <ImageBrush ImageSource="/images/textbox_background.png"/>
+                                    <ImageBrush ImageSource="/images/textbox_background.png" />
                                 </Border.Background>
                                 <Border.BorderBrush>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -219,45 +205,27 @@
         </Style>
 
         <Style TargetType="{x:Type ComboBox}">
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ComboBox}">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition MaxWidth="20"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition MaxWidth="20" />
                             </Grid.ColumnDefinitions>
-                            <TextBox
-                Style="{StaticResource ComboboxTextBoxStyle}"  
-                Padding="5,0,0,0"  
-                Height="{TemplateBinding Height}"
-                                FontSize="16"
-                                FontWeight="Bold"
-                                FontFamily="Times New Roman"
-                                Text="{TemplateBinding Text}"
-                                IsReadOnly="True"
-                                >
+                            <TextBox Style="{StaticResource ComboboxTextBoxStyle}" Padding="5,0,0,0" Height="{TemplateBinding Height}" FontSize="16" FontWeight="Bold" FontFamily="Times New Roman" Text="{TemplateBinding Text}" IsReadOnly="True">
                                 <TextBox.Foreground>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="Black"/>
-                                        <GradientStop Color="#FF171717" Offset="1"/>
-                                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                                        <GradientStop Color="Black" />
+                                        <GradientStop Color="#FF171717" Offset="1" />
+                                        <GradientStop Color="#FF333333" Offset="0.02" />
                                     </LinearGradientBrush>
                                 </TextBox.Foreground>
                             </TextBox>
-                            <ToggleButton Grid.Column="1" Margin="0"  
-               Height="{TemplateBinding Height}"  
-               Style="{StaticResource ComboboxButtonStyle}"  
-               Focusable="False"  
-               IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"  
-               ClickMode="Press">
-                                <Path Grid.Column="1"  
-                  HorizontalAlignment="Center"  
-                  VerticalAlignment="Center"  
-                  Data="M 0 0 L 4 4 L 8 0 Z"  
-                  Fill="#FF424242" />
+                            <ToggleButton Grid.Column="1" Margin="0" Height="{TemplateBinding Height}" Style="{StaticResource ComboboxButtonStyle}" Focusable="False" IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" ClickMode="Press">
+                                <Path Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Data="M 0 0 L 4 4 L 8 0 Z" Fill="#FF424242" />
                             </ToggleButton>
                             <!--<ContentPresenter Name="ContentSite"  
                Content="{TemplateBinding SelectionBoxItem}"  
@@ -266,26 +234,13 @@
                VerticalAlignment="Center"  
                HorizontalAlignment="Left"  
                Margin="5,0,0,0"/>-->
-                            <Popup Name="Popup"  
-               Placement="Bottom"  
-               IsOpen="{TemplateBinding IsDropDownOpen}"  
-               AllowsTransparency="True"   
-               Focusable="False"  
-               PopupAnimation="Slide"
->
-                                <Grid Name="DropDown"  
-                 SnapsToDevicePixels="True"          
-                 MinWidth="{TemplateBinding ActualWidth}"  
-                 MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                                    <Border   
-                   x:Name="DropDownBorder"  
-                   BorderThickness="1"  
-                   CornerRadius="5"  
-                   BorderBrush="Black">
+                            <Popup Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True" Focusable="False" PopupAnimation="Slide">
+                                <Grid Name="DropDown" SnapsToDevicePixels="True" MinWidth="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border x:Name="DropDownBorder" BorderThickness="1" CornerRadius="5" BorderBrush="Black">
                                         <Border.Background>
                                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                                <GradientStop Color="#FF444444"/>
-                                                <GradientStop Color="#FF636363" Offset="1"/>
+                                                <GradientStop Color="#FF444444" />
+                                                <GradientStop Color="#FF636363" Offset="1" />
                                             </LinearGradientBrush>
                                         </Border.Background>
                                     </Border>
@@ -309,10 +264,10 @@
         </Style>
 
         <Style TargetType="Border" x:Key="br">
-            <Setter Property="Margin" Value="10"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Padding" Value="2"/>
-            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Padding" Value="2" />
+            <Setter Property="CornerRadius" Value="3" />
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -351,11 +306,11 @@
                     </LinearGradientBrush>
                 </Border.BorderBrush>
                 <Border.Background>
-                    <ImageBrush ImageSource="/images/summary_background.png"/>
+                    <ImageBrush ImageSource="/images/summary_background.png" />
                 </Border.Background>
                 <ScrollViewer Grid.Column="1">
                     <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,20">
-                        <TextBlock Text="Select Alignment:" Margin="0,0,0,5" Style="{StaticResource Header2}"/>
+                        <TextBlock Text="Select Alignment:" Margin="0,0,0,5" Style="{StaticResource Header2}" />
                         <ComboBox x:Name="AlignmentComboBox" Width="200">
                             <ComboBoxItem Content="Lawful Good" />
                             <ComboBoxItem Content="Neutral Good" />
@@ -368,9 +323,9 @@
                             <ComboBoxItem Content="Chaotic Evil" />
                         </ComboBox>
 
-                        <Border Style="{StaticResource br}"/>
+                        <Border Style="{StaticResource br}" />
 
-                        <TextBlock Text="Select Background:" Margin="10,20,0,5" Style="{StaticResource Header2}"/>
+                        <TextBlock Text="Select Background:" Margin="10,20,0,5" Style="{StaticResource Header2}" />
                         <ComboBox x:Name="BackgroundComboBox" Width="200">
                             <ComboBoxItem Content="Acolyte" />
                             <ComboBoxItem Content="Charlatan" />
@@ -387,9 +342,9 @@
                             <ComboBoxItem Content="Urchin" />
                         </ComboBox>
 
-                        <Border Style="{StaticResource br}"/>
+                        <Border Style="{StaticResource br}" />
 
-                        <TextBlock Text="Write something about your character" Margin="10,20,0,5" Style="{StaticResource Header2}" TextWrapping="Wrap"/>
+                        <TextBlock Text="Write something about your character" Margin="10,20,0,5" Style="{StaticResource Header2}" TextWrapping="Wrap" />
                         <TextBlock Text="Description" Margin="10,10,0,5" />
                         <TextBox x:Name="description" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
                         <TextBlock Text="Personality Traits" Margin="10,20,0,5" />

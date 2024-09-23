@@ -81,7 +81,7 @@ namespace DnDcharacterCreator.UserControls
 
             if (list == null)
             {
-                if(check)
+                if (check)
                     MessageBox.Show("No proficiency with that name exists in this category.");
                 else
                     MessageBox.Show("No item with that name exists.");

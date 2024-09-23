@@ -1,9 +1,6 @@
 ﻿using DnDcharacterCreator.Classes;
-using System.Diagnostics;
-using System.Security.Claims;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace DnDcharacterCreator.UserControls
 {
@@ -77,15 +74,15 @@ namespace DnDcharacterCreator.UserControls
                 // Aasimar Names
                 { "Seraphiel", "Celestia", "Dawn", "Mirael", "Uriel", "Zophiel", "Liora", "Elysium", "Solara", "Gideon" }
             };
-            return raceNames[raceId,rnd.Next(0,10)];
+            return raceNames[raceId, rnd.Next(0, 10)];
         }
 
         private void SetWindow()
         {
             int race = rnd.Next(0, 10);
             RacesComboBox.SelectedIndex = race;
-            ClassesComboBox.SelectedIndex = rnd.Next(0,10);
-            SubclassesComboBox.SelectedIndex = rnd.Next(0,5);
+            ClassesComboBox.SelectedIndex = rnd.Next(0, 10);
+            SubclassesComboBox.SelectedIndex = rnd.Next(0, 5);
             characterName.Text = GenerateRandomName(race);
         }
 
@@ -476,7 +473,7 @@ namespace DnDcharacterCreator.UserControls
             string buttonName = button.Name;
             string associatedTextBoxName = buttonName.Replace("_button_add", "_textbox").Replace("_button_remove", "_textbox");
 
-            TextBox associatedTextBox = (TextBox)this.FindName(associatedTextBoxName);
+            TextBox associatedTextBox = (TextBox)FindName(associatedTextBoxName);
             return associatedTextBox;
         }
 
@@ -484,7 +481,7 @@ namespace DnDcharacterCreator.UserControls
         {
             SetWindow();
             strength_button_remove.IsEnabled = false;
-            dexterity_button_remove.IsEnabled=false;
+            dexterity_button_remove.IsEnabled = false;
             constitution_button_remove.IsEnabled = false;
             inteligence_button_remove.IsEnabled = false;
             wisdom_button_remove.IsEnabled = false;
@@ -497,9 +494,9 @@ namespace DnDcharacterCreator.UserControls
             switch (className)
             {
                 case "Barbarian":
-                    sv.Strength = true;       
+                    sv.Strength = true;
                     sv.Dexterity = false;
-                    sv.Constitution = true;   
+                    sv.Constitution = true;
                     sv.Intelligence = false;
                     sv.Wisdom = false;
                     sv.Charisma = false;
@@ -507,35 +504,35 @@ namespace DnDcharacterCreator.UserControls
 
                 case "Bard":
                     sv.Strength = false;
-                    sv.Dexterity = true;    
+                    sv.Dexterity = true;
                     sv.Constitution = false;
                     sv.Intelligence = false;
                     sv.Wisdom = false;
-                    sv.Charisma = true;     
+                    sv.Charisma = true;
                     break;
 
                 case "Cleric":
                     sv.Strength = false;
                     sv.Dexterity = false;
-                    sv.Constitution = true; 
+                    sv.Constitution = true;
                     sv.Intelligence = false;
-                    sv.Wisdom = true;         
+                    sv.Wisdom = true;
                     sv.Charisma = false;
                     break;
 
                 case "Druid":
                     sv.Strength = false;
                     sv.Dexterity = false;
-                    sv.Constitution = true;   
+                    sv.Constitution = true;
                     sv.Intelligence = false;
-                    sv.Wisdom = true;         
+                    sv.Wisdom = true;
                     sv.Charisma = false;
                     break;
 
                 case "Fighter":
-                    sv.Strength = true;      
+                    sv.Strength = true;
                     sv.Dexterity = false;
-                    sv.Constitution = true;    
+                    sv.Constitution = true;
                     sv.Intelligence = false;
                     sv.Wisdom = false;
                     sv.Charisma = false;
@@ -543,25 +540,25 @@ namespace DnDcharacterCreator.UserControls
 
                 case "Monk":
                     sv.Strength = false;
-                    sv.Dexterity = true;       
+                    sv.Dexterity = true;
                     sv.Constitution = false;
                     sv.Intelligence = false;
-                    sv.Wisdom = true;           
+                    sv.Wisdom = true;
                     sv.Charisma = false;
                     break;
 
                 case "Paladin":
-                    sv.Strength = true;       
+                    sv.Strength = true;
                     sv.Dexterity = false;
-                    sv.Constitution = true;     
+                    sv.Constitution = true;
                     sv.Intelligence = false;
                     sv.Wisdom = false;
-                    sv.Charisma = true;       
+                    sv.Charisma = true;
                     break;
 
                 case "Rogue":
                     sv.Strength = false;
-                    sv.Dexterity = true;       
+                    sv.Dexterity = true;
                     sv.Constitution = false;
                     sv.Intelligence = false;
                     sv.Wisdom = false;
@@ -571,26 +568,26 @@ namespace DnDcharacterCreator.UserControls
                 case "Sorcerer":
                     sv.Strength = false;
                     sv.Dexterity = false;
-                    sv.Constitution = true;    
+                    sv.Constitution = true;
                     sv.Intelligence = false;
                     sv.Wisdom = false;
-                    sv.Charisma = true;      
+                    sv.Charisma = true;
                     break;
 
                 case "Warlock":
                     sv.Strength = false;
                     sv.Dexterity = false;
-                    sv.Constitution = true;     
+                    sv.Constitution = true;
                     sv.Intelligence = false;
                     sv.Wisdom = false;
-                    sv.Charisma = true;        
+                    sv.Charisma = true;
                     break;
 
                 case "Wizard":
                     sv.Strength = false;
                     sv.Dexterity = false;
                     sv.Constitution = false;
-                    sv.Intelligence = true;      
+                    sv.Intelligence = true;
                     sv.Wisdom = false;
                     sv.Charisma = false;
                     break;
@@ -635,7 +632,7 @@ namespace DnDcharacterCreator.UserControls
             };
             character.Stats = stats;
             character.SavingThrows = GetSavingThrows(character.Class);
-            character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text)+ character.Stats.Constitution;
+            character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text) + character.Stats.Constitution;
             character.Proficiency = 3;
             window.frame.NavigationService.Navigate(new BackgroundCreator(window, character));
         }
