@@ -12,6 +12,7 @@
     <None Remove="Images\button_background.png" />
     <None Remove="Images\button_background_sq.png" />
     <None Remove="Images\icon.png" />
+    <None Remove="images\profmodify_icon.png" />
     <None Remove="Images\summary_background.png" />
     <None Remove="Images\textbox_background.png" />
     <None Remove="Images\textbox_background_sq.png" />
@@ -22,6 +23,7 @@
     <Resource Include="Images\button_background.png" />
     <Resource Include="Images\button_background_sq.png" />
     <Resource Include="Images\icon.png" />
+    <Resource Include="images\profmodify_icon.png" />
     <Resource Include="Images\summary_background.png" />
     <Resource Include="Images\textbox_background.png" />
     <Resource Include="Images\textbox_background_sq.png" />

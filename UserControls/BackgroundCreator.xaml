@@ -227,7 +227,7 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
-                                <ColumnDefinition MaxWidth="18"/>
+                                <ColumnDefinition MaxWidth="20"/>
                             </Grid.ColumnDefinitions>
                             <TextBox
                 Style="{StaticResource ComboboxTextBoxStyle}"  
@@ -235,8 +235,18 @@
                 Height="{TemplateBinding Height}"
                                 FontSize="16"
                                 FontWeight="Bold"
-                                FontFamily="Times New Roman" IsEnabled="False"
-                                />
+                                FontFamily="Times New Roman"
+                                Text="{TemplateBinding Text}"
+                                IsReadOnly="True"
+                                >
+                                <TextBox.Foreground>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Black"/>
+                                        <GradientStop Color="#FF171717" Offset="1"/>
+                                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                                    </LinearGradientBrush>
+                                </TextBox.Foreground>
+                            </TextBox>
                             <ToggleButton Grid.Column="1" Margin="0"  
                Height="{TemplateBinding Height}"  
                Style="{StaticResource ComboboxButtonStyle}"  
@@ -249,13 +259,13 @@
                   Data="M 0 0 L 4 4 L 8 0 Z"  
                   Fill="#FF424242" />
                             </ToggleButton>
-                            <ContentPresenter Name="ContentSite"  
+                            <!--<ContentPresenter Name="ContentSite"  
                Content="{TemplateBinding SelectionBoxItem}"  
                ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"  
                ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"  
                VerticalAlignment="Center"  
                HorizontalAlignment="Left"  
-               Margin="5,0,0,0"/>
+               Margin="5,0,0,0"/>-->
                             <Popup Name="Popup"  
                Placement="Bottom"  
                IsOpen="{TemplateBinding IsDropDownOpen}"  
@@ -298,6 +308,22 @@
             <Setter Property="HorizontalAlignment" Value="Center" />
         </Style>
 
+        <Style TargetType="Border" x:Key="br">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                        <GradientStop Color="#FF646464" Offset="0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </UserControl.Resources>
 
 
@@ -329,7 +355,7 @@
                 </Border.Background>
                 <ScrollViewer Grid.Column="1">
                     <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,20">
-                        <TextBlock Text="Select Alignment:" Margin="0,0,0,5" />
+                        <TextBlock Text="Select Alignment:" Margin="0,0,0,5" Style="{StaticResource Header2}"/>
                         <ComboBox x:Name="AlignmentComboBox" Width="200">
                             <ComboBoxItem Content="Lawful Good" />
                             <ComboBoxItem Content="Neutral Good" />
@@ -342,7 +368,9 @@
                             <ComboBoxItem Content="Chaotic Evil" />
                         </ComboBox>
 
-                        <TextBlock Text="Select Background:" Margin="10,20,0,5" />
+                        <Border Style="{StaticResource br}"/>
+
+                        <TextBlock Text="Select Background:" Margin="10,20,0,5" Style="{StaticResource Header2}"/>
                         <ComboBox x:Name="BackgroundComboBox" Width="200">
                             <ComboBoxItem Content="Acolyte" />
                             <ComboBoxItem Content="Charlatan" />
@@ -358,6 +386,8 @@
                             <ComboBoxItem Content="Soldier" />
                             <ComboBoxItem Content="Urchin" />
                         </ComboBox>
+
+                        <Border Style="{StaticResource br}"/>
 
                         <TextBlock Text="Write something about your character" Margin="10,20,0,5" Style="{StaticResource Header2}" TextWrapping="Wrap"/>
                         <TextBlock Text="Description" Margin="10,10,0,5" />

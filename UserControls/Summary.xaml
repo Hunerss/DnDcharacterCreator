@@ -283,6 +283,21 @@
         </Style>
 
 
+        <Style TargetType="Border" x:Key="br">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                        <GradientStop Color="#FF646464" Offset="0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
 
 
@@ -360,6 +375,9 @@
                             <TextBlock Text="Proficiency: " Width="170px" />
                             <TextBox x:Name="proficiency" Text="placeholder" IsReadOnly="True" />
                         </DockPanel>
+
+                        <Border Style="{StaticResource br}"/>
+
                         <StackPanel x:Name="spellcastingContainer">
                             <TextBlock Text="Spellcasting" Style="{StaticResource Header2}" />
                             <DockPanel>
@@ -375,6 +393,9 @@
                                 <TextBox x:Name="spellDC" Text="placeholder" IsReadOnly="True" />
                             </DockPanel>
                         </StackPanel>
+
+                        <Border Style="{StaticResource br}"/>
+
                         <TextBlock Text="Stats" Style="{StaticResource Header2}" />
                         <DockPanel>
                             <TextBlock Text="Strength: " Width="170px" />
@@ -400,6 +421,8 @@
                             <TextBlock Text="Charisma: " Width="170px" />
                             <TextBox x:Name="charisma" Text="placeholder" IsReadOnly="True" />
                         </DockPanel>
+
+                        <Border Style="{StaticResource br}"/>
 
                         <TextBlock Text="Skills" Style="{StaticResource Header2}" />
 
@@ -511,6 +534,7 @@
                             <TextBox x:Name="survival_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}" />
                         </DockPanel>
 
+                        <Border Style="{StaticResource br}"/>
 
                         <TextBlock Text="Saving throws" Style="{StaticResource Header2}" />
                         <DockPanel>
@@ -544,7 +568,7 @@
                             <TextBox x:Name="charisma_sv_prof" Text="Prof" IsReadOnly="True" Style="{StaticResource SqB}" />
                         </DockPanel>
 
-
+                        <Border Style="{StaticResource br}"/>
 
                         <TextBlock Text="Complex informaions" Style="{StaticResource Header2}" />
                         <DockPanel>
@@ -576,19 +600,30 @@
                             <TextBox x:Name="about" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True" />
                         </DockPanel>
 
+                        <Border Style="{StaticResource br}"/>
+
                         <!--Profficiences-->
                         <TextBlock Text="Weapons" Style="{StaticResource Header2}" />
                         <StackPanel x:Name="profficiences_weapons">
 
                         </StackPanel>
+                        
+                        <Border Style="{StaticResource br}"/>
+
                         <TextBlock Text="Armors" Style="{StaticResource Header2}" />
                         <StackPanel x:Name="profficiences_armor">
 
                         </StackPanel>
+
+                        <Border Style="{StaticResource br}"/>
+
                         <TextBlock Text="Tools" Style="{StaticResource Header2}" />
                         <StackPanel x:Name="profficiences_tools">
 
                         </StackPanel>
+
+                        <Border Style="{StaticResource br}"/>
+
                         <TextBlock Text="Languages" Style="{StaticResource Header2}" />
                         <StackPanel x:Name="profficiences_languages">
 
@@ -599,6 +634,9 @@
                         <StackPanel x:Name="items">
 
                         </StackPanel>
+
+                        <Border Style="{StaticResource br}"/>
+
                         <TextBlock Text="Gold" Style="{StaticResource Header2}" />
                         <DockPanel>
                             <TextBlock Text="Gold: " Width="170px" />

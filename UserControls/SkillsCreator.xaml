@@ -227,6 +227,22 @@
             <Setter Property="FontSize" Value="32" />
             <Setter Property="HorizontalAlignment" Value="Center" />
         </Style>
+
+        <Style TargetType="Border" x:Key="br">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                        <GradientStop Color="#FF646464" Offset="0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </UserControl.Resources>
 
 
@@ -278,6 +294,8 @@
                             <CheckBox x:Name="SurvivalCheckBox" Content="Survival" Checked="SkillChecked" Unchecked="SkillUnchecked" />
                         </StackPanel>
 
+                        <Border Style="{StaticResource br}"/>
+                        
                         <TextBlock Text="Insert your languages:" FontSize="24" />
                         <StackPanel x:Name="languages" HorizontalAlignment="Center">
                             <TextBox x:Name="language_1" IsReadOnly="True" Text="Common" />
@@ -286,6 +304,8 @@
                             <TextBox x:Name="language_4" Visibility="Collapsed" />
                             <TextBox x:Name="language_5" Visibility="Collapsed" />
                         </StackPanel>
+                        
+                        <Border Style="{StaticResource br}"/>
 
                         <TextBlock Text="Select your equipment:" FontSize="24" />
                         <StackPanel x:Name="ItemsStackPanel">

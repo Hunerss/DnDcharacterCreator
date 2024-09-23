@@ -288,7 +288,7 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
-                                <ColumnDefinition MaxWidth="18"/>
+                                <ColumnDefinition MaxWidth="20"/>
                             </Grid.ColumnDefinitions>
                             <TextBox
                 Style="{StaticResource ComboboxTextBoxStyle}"  
@@ -296,8 +296,18 @@
                 Height="{TemplateBinding Height}"
                                 FontSize="16"
                                 FontWeight="Bold"
-                                FontFamily="Times New Roman" IsEnabled="False"
-                                />
+                                FontFamily="Times New Roman"
+                                Text="{TemplateBinding Text}"
+                                IsReadOnly="True"
+                                >
+                                <TextBox.Foreground>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Black"/>
+                                        <GradientStop Color="#FF171717" Offset="1"/>
+                                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                                    </LinearGradientBrush>
+                                </TextBox.Foreground>
+                            </TextBox>
                             <ToggleButton Grid.Column="1" Margin="0"  
                Height="{TemplateBinding Height}"  
                Style="{StaticResource ComboboxButtonStyle}"  
@@ -310,13 +320,13 @@
                   Data="M 0 0 L 4 4 L 8 0 Z"  
                   Fill="#FF424242" />
                             </ToggleButton>
-                            <ContentPresenter Name="ContentSite"  
+                            <!--<ContentPresenter Name="ContentSite"  
                Content="{TemplateBinding SelectionBoxItem}"  
                ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"  
                ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"  
                VerticalAlignment="Center"  
                HorizontalAlignment="Left"  
-               Margin="5,0,0,0"/>
+               Margin="5,0,0,0"/>-->
                             <Popup Name="Popup"  
                Placement="Bottom"  
                IsOpen="{TemplateBinding IsDropDownOpen}"  
@@ -351,6 +361,126 @@
             </Setter>
         </Style>
 
+        <Style TargetType="Border" x:Key="br">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                        <GradientStop Color="#FF646464" Offset="0" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style TargetType="Button" x:Key="SqL">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="4, 4, 0, 4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+
+            </Setter>
+
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background_sq.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10, 0, 0, 10" />
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style TargetType="Button" x:Key="SqR">
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BorderThickness" Value="0, 4, 4, 4" />
+            <Setter Property="FontFamily" Value="Times New Roman" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565" />
+                        <GradientStop Color="#FF424242" Offset="1" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" />
+                        <GradientStop Color="#FF171717" Offset="1" />
+                        <GradientStop Color="#FF333333" Offset="0.02" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+
+            </Setter>
+
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/button_background_sq.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="0, 10, 10, 0" />
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="SqM">
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="BorderThickness" Value="4"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF656565"/>
+                        <GradientStop Color="#FF424242" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="../images/textbox_background_sq.png" TileMode="None" Stretch="Fill"></ImageBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF171717" Offset="1"/>
+                        <GradientStop Color="#FF333333" Offset="0.02"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
     </UserControl.Resources>
 
@@ -387,6 +517,8 @@
                             <Button x:Name="radnomName" Content="Random" Padding="2px" Click="radnomName_Click" Style="{StaticResource Sq}" />
                         </DockPanel>
 
+                        <Border Style="{StaticResource br}"/>
+
                         <!--Race-->
                         <TextBlock Text="Choose your character race?" />
                         <ComboBox x:Name="RacesComboBox" Width="200" VerticalAlignment="Top" Margin="10" SelectionChanged="RacesComboBox_SelectionChanged">
@@ -402,6 +534,8 @@
                             <ComboBoxItem Content="Aasimar" />
                         </ComboBox>
 
+                        <Border Style="{StaticResource br}"/>
+                        
                         <!--Class-->
                         <TextBlock Text="Choose your character class?" />
                         <ComboBox x:Name="ClassesComboBox" Width="200" VerticalAlignment="Top" Margin="10" SelectionChanged="ClassesComboBox_SelectionChanged">
@@ -419,10 +553,14 @@
                             <ComboBoxItem Content="Wizard" />
                         </ComboBox>
 
+                        <Border Style="{StaticResource br}"/>
+                        
                         <!--Sub-class-->
                         <TextBlock Text="Choose your character sub-class?" />
                         <ComboBox x:Name="SubclassesComboBox" Width="200" VerticalAlignment="Top"></ComboBox>
 
+                        <Border Style="{StaticResource br}"/>
+                        
                         <!--Hit Points-->
                         <TextBlock Text="Select your character hit points" />
                         <DockPanel>
@@ -432,6 +570,8 @@
                             <Button x:Name="max_button" Content="Max" Click="Button_Click" />
                         </DockPanel>
 
+                        <Border Style="{StaticResource br}"/>
+                        
                         <DockPanel>
                             <TextBlock x:Name="ability_scores_text" Text="Ability Scores: " />
                             <ComboBox x:Name="ability_scores" DropDownClosed="Ability_scores_DropDownClosed">
@@ -439,6 +579,7 @@
                                 <ComboBoxItem Name="point_buy" Content="Point Buy" />
                             </ComboBox>
                         </DockPanel>
+                        
 
                         <DockPanel>
                             <TextBlock x:Name="spellcasting_ability_text" Text="Spellcasting Ability: " Visibility="Hidden" />
@@ -451,6 +592,7 @@
                             <TextBlock x:Name="remaining_points_text" Text="Remaining Points: " />
                             <TextBlock x:Name="remaining_points" Text="26" />
                         </DockPanel>
+                        
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -472,34 +614,34 @@
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <TextBox x:Name="strength_textbox" Text="8" Grid.Column="1" Grid.Row="0" IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <Button x:Name="strength_button_add" Content="+" Grid.Column="0" Grid.Row="0" Click="Add_Click" Style="{StaticResource Sq}" />
-                            <Button x:Name="strength_button_remove" Content="-" Grid.Column="2" Grid.Row="0" Click="Remove_Click" Style="{StaticResource Sq}" />
+                            <TextBox x:Name="strength_textbox" Text="8" Grid.Column="1" Grid.Row="0" IsReadOnly="True" Style="{StaticResource SqM}"/>
+                            <Button x:Name="strength_button_add" Content="+" Grid.Column="0" Grid.Row="0" Click="Add_Click" Style="{StaticResource SqL}" />
+                            <Button x:Name="strength_button_remove" Content="-" Grid.Column="2" Grid.Row="0" Click="Remove_Click" Style="{StaticResource SqR}" Margin="0, 0, 3, 0"/>
                             <TextBlock Text="Strength" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"/>
 
-                            <TextBox x:Name="dexterity_textbox" Text="8" Grid.Column="4" Grid.Row="0" IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <Button x:Name="dexterity_button_add" Content="+" Grid.Column="3" Grid.Row="0" Click="Add_Click" Style="{StaticResource Sq}" />
-                            <Button x:Name="dexterity_button_remove" Content="-" Grid.Column="5" Grid.Row="0" Click="Remove_Click" Style="{StaticResource Sq}" />
+                            <TextBox x:Name="dexterity_textbox" Text="8" Grid.Column="4" Grid.Row="0" IsReadOnly="True" Style="{StaticResource SqM}"/>
+                            <Button x:Name="dexterity_button_add" Content="+" Grid.Column="3" Grid.Row="0" Click="Add_Click" Style="{StaticResource SqL}" Margin="3, 0, 0, 0"/>
+                            <Button x:Name="dexterity_button_remove" Content="-" Grid.Column="5" Grid.Row="0" Click="Remove_Click" Style="{StaticResource SqR}" Margin="0, 0, 3, 0"/>
                             <TextBlock Text="Dexternity" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1"/>
 
-                            <TextBox x:Name="constitution_textbox" Text="8" Grid.Column="7" Grid.Row="0" IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <Button x:Name="constitution_button_add" Content="+" Grid.Column="6" Grid.Row="0" Click="Add_Click" Style="{StaticResource Sq}" />
-                            <Button x:Name="constitution_button_remove" Content="-" Grid.Column="8" Grid.Row="0" Click="Remove_Click" Style="{StaticResource Sq}" />
+                            <TextBox x:Name="constitution_textbox" Text="8" Grid.Column="7" Grid.Row="0" IsReadOnly="True" Style="{StaticResource SqM}"/>
+                            <Button x:Name="constitution_button_add" Content="+" Grid.Column="6" Grid.Row="0" Click="Add_Click" Style="{StaticResource SqL}" Margin="3, 0, 0, 0"/>
+                            <Button x:Name="constitution_button_remove" Content="-" Grid.Column="8" Grid.Row="0" Click="Remove_Click" Style="{StaticResource SqR}" />
                             <TextBlock Text="Constitution" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="1"/>
 
-                            <TextBox x:Name="inteligence_textbox" Text="8" Grid.Column="1" Grid.Row="2" IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <Button x:Name="inteligence_button_add" Content="+" Grid.Column="0" Grid.Row="2" Click="Add_Click" Style="{StaticResource Sq}" />
-                            <Button x:Name="inteligence_button_remove" Content="-" Grid.Column="2" Grid.Row="2" Click="Remove_Click" Style="{StaticResource Sq}" />
+                            <TextBox x:Name="inteligence_textbox" Text="8" Grid.Column="1" Grid.Row="2" IsReadOnly="True" Style="{StaticResource SqM}"/>
+                            <Button x:Name="inteligence_button_add" Content="+" Grid.Column="0" Grid.Row="2" Click="Add_Click" Style="{StaticResource SqL}" />
+                            <Button x:Name="inteligence_button_remove" Content="-" Grid.Column="2" Grid.Row="2" Click="Remove_Click" Style="{StaticResource SqR}" Margin="0, 0, 3, 0"/>
                             <TextBlock Text="Inteligence" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
 
-                            <TextBox x:Name="wisdom_textbox" Text="8" Grid.Column="4" Grid.Row="2" IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <Button x:Name="wisdom_button_add" Content="+" Grid.Column="3" Grid.Row="2" Click="Add_Click" Style="{StaticResource Sq}" />
-                            <Button x:Name="wisdom_button_remove" Content="-" Grid.Column="5" Grid.Row="2" Click="Remove_Click" Style="{StaticResource Sq}" />
+                            <TextBox x:Name="wisdom_textbox" Text="8" Grid.Column="4" Grid.Row="2" IsReadOnly="True" Style="{StaticResource SqM}"/>
+                            <Button x:Name="wisdom_button_add" Content="+" Grid.Column="3" Grid.Row="2" Click="Add_Click" Style="{StaticResource SqL}" Margin="3, 0, 0, 0"/>
+                            <Button x:Name="wisdom_button_remove" Content="-" Grid.Column="5" Grid.Row="2" Click="Remove_Click" Style="{StaticResource SqR}" Margin="0, 0, 3, 0"/>
                             <TextBlock Text="Wisdom" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3"/>
 
-                            <TextBox x:Name="charisma_textbox" Text="8" Grid.Column="7" Grid.Row="2" IsReadOnly="True" Style="{StaticResource SqB}"/>
-                            <Button x:Name="charisma_button_add" Content="+" Grid.Column="6" Grid.Row="2" Click="Add_Click" Style="{StaticResource Sq}" />
-                            <Button x:Name="charisma_button_remove" Content="-" Grid.Column="8" Grid.Row="2" Click="Remove_Click" Style="{StaticResource Sq}" />
+                            <TextBox x:Name="charisma_textbox" Text="8" Grid.Column="7" Grid.Row="2" IsReadOnly="True" Style="{StaticResource SqM}"/>
+                            <Button x:Name="charisma_button_add" Content="+" Grid.Column="6" Grid.Row="2" Click="Add_Click" Style="{StaticResource SqL}" Margin="3, 0, 0, 0"/>
+                            <Button x:Name="charisma_button_remove" Content="-" Grid.Column="8" Grid.Row="2" Click="Remove_Click" Style="{StaticResource SqR}" />
                             <TextBlock Text="Charisma" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3"/>
                         </Grid>
 
