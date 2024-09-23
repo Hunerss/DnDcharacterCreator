@@ -636,5 +636,10 @@ namespace DnDcharacterCreator.UserControls
             character.Proficiency = 3;
             window.frame.NavigationService.Navigate(new BackgroundCreator(window, character));
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            window.frame.NavigationService.Navigate(new MainMenu(window));
+        }
     }
 }

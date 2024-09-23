@@ -16,6 +16,7 @@ namespace DnDcharacterCreator.UserControls
     {
         MainWindow window;
         Character character;
+        Character tmpCharacter;
         Random rnd = new();
 
         private int maxProficiencies = 3;
@@ -41,6 +42,7 @@ namespace DnDcharacterCreator.UserControls
             InitializeComponent();
             window = win;
             this.character = character;
+            tmpCharacter = character;
         }
 
         private void SkillChecked(object sender, RoutedEventArgs e)
@@ -436,6 +438,11 @@ namespace DnDcharacterCreator.UserControls
                 }
             }
             window.frame.NavigationService.Navigate(new Summary(window, character));
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            window.frame.NavigationService.Navigate(new BackgroundCreator(window, tmpCharacter));
         }
     }
 }

@@ -40,5 +40,10 @@ namespace DnDcharacterCreator.UserControls
             character.About = about.Text;
             window.frame.NavigationService.Navigate(new SkillsCreator(window, character));
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            window.frame.NavigationService.Navigate(new CharacterCreator(window));
+        }
     }
 }

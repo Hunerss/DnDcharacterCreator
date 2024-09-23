@@ -503,5 +503,10 @@ namespace DnDcharacterCreator.UserControls
                 stackPanel.Children.Add(textBlock);
             }
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            window.frame.NavigationService.Navigate(new MainMenu(window));
+        }
     }
 }
