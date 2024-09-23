@@ -45,7 +45,7 @@
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
         <TextBlock Text="Welcome to DnD Character Creator" Style="{StaticResource Header}" />

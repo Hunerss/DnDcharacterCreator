@@ -451,7 +451,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="9*" />
         </Grid.RowDefinitions>
         <TextBlock Text="Race, Class and Stats" Style="{StaticResource Header}" />
