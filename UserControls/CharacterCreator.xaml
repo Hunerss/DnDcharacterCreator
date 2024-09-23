@@ -158,6 +158,8 @@
                             <TextBlock Text="Charisma" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3" />
                         </Grid>
 
+                        <Border Style="{StaticResource br}" />
+
                         <DockPanel>
                             <Button x:Name="back" Content="Return" Click="Back_Click" />
                             <Button x:Name="go" Content="Continue" Click="Go_Click" />

@@ -128,7 +128,7 @@ namespace DnDcharacterCreator.UserControls
                     language_2.Text = "Elvish";
                     break;
                 case "Half-Orc":
-                    language_2.Text = "Orc";
+                    language_2.Text = "Orcish";
                     break;
                 case "Tiefling":
                     language_2.Text = "Infernal";

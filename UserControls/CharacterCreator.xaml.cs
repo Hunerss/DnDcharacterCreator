@@ -632,7 +632,7 @@ namespace DnDcharacterCreator.UserControls
             };
             character.Stats = stats;
             character.SavingThrows = GetSavingThrows(character.Class);
-            character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text) + character.Stats.Constitution;
+            character.HitPoints = Convert.ToInt32(hitpoints_textbox.Text) + Convert.ToInt32(Math.Floor((character.Stats.Dexterity - 10) / 2.0));
             character.Proficiency = 3;
             window.frame.NavigationService.Navigate(new BackgroundCreator(window, character));
         }

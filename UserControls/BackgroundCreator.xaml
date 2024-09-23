@@ -71,6 +71,8 @@
                         <TextBlock Text="About" Margin="10,20,0,5" />
                         <TextBox x:Name="about" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
 
+                        <Border Style="{StaticResource br}" />
+
                         <DockPanel>
                             <Button x:Name="back" Content="Return" Click="Back_Click" />
                             <Button x:Name="go" Content="Continue" Click="Go_Click" />
