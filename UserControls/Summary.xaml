@@ -377,9 +377,9 @@
                             <TextBox x:Name="proficiency" Text="placeholder" IsReadOnly="True" />
                         </DockPanel>
 
-                        <Border Style="{StaticResource br}"/>
 
                         <StackPanel x:Name="spellcastingContainer">
+                            <Border Style="{StaticResource br}"/>
                             <TextBlock Text="Spellcasting" Style="{StaticResource Header2}" />
                             <DockPanel>
                                 <TextBlock Text="Spellcasting Ability: " Width="170px" />
@@ -629,7 +629,9 @@
                         <StackPanel x:Name="profficiences_languages">
 
                         </StackPanel>
-
+                        
+                        <Border Style="{StaticResource br}" />
+                        
                         <!--Inventory-->
                         <TextBlock Text="Inventory" Style="{StaticResource Header2}" />
                         <StackPanel x:Name="items">
@@ -643,6 +645,9 @@
                             <TextBlock Text="Gold: " Width="170px" />
                             <TextBox x:Name="gold" Text="placeholder" TextWrapping="Wrap" IsReadOnly="True" />
                         </DockPanel>
+
+                        <Border Style="{StaticResource br}" />
+
                         <Button x:Name="back" Content="Return" Click="Back_Click" />
                     </StackPanel>
                 </ScrollViewer>
