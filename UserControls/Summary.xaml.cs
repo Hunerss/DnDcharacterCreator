@@ -75,7 +75,7 @@ namespace DnDcharacterCreator.UserControls
                 "Armors" => new List<string>(character.Proficiencies.Armor),
                 "Tools" => new List<string>(character.Proficiencies.Tools),
                 "Languages" => new List<string>(character.Proficiencies.Languages),
-                "Inventory" => new List<string>(character.Proficiencies.Languages),
+                "Inventory" => new List<string>(character.Inventory.Items),
                 _ => null
             };
 
@@ -476,7 +476,7 @@ namespace DnDcharacterCreator.UserControls
             else if (kind == "Tools")
                 profs = character.Proficiencies.Tools;
             else if (kind == "Inventory")
-                profs = character.Proficiencies.Tools;
+                profs = [.. character.Inventory.Items];
             else
                 profs = character.Proficiencies.Languages;
 
