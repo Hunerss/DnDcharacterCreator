@@ -290,32 +290,32 @@
                         <TextBlock Text="Select your equipment:" FontSize="24" />
                         <StackPanel x:Name="ItemsStackPanel">
                             <TextBlock Text="Weapon" FontWeight="Bold" />
-                            <CheckBox x:Name="weapon_1" Content="1 Greataxe" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="weapon_2" Content="1 Longsword" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="weapon_3" Content="1 Rapier" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="weapon_4" Content="1 Shortbow + 10 Arrows" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="weapon_5" Content="1 Dagger" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_1" Content="Greataxe" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_2" Content="Longsword" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_3" Content="Rapier" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_4" Content="Shortbow + 10 Arrows" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="weapon_5" Content="Dagger" Checked="ItemChecked" Unchecked="ItemUnchecked" />
 
                             <TextBlock Text="Armor" FontWeight="Bold" Margin="0,10,0,0" />
-                            <CheckBox x:Name="armor_1" Content="1 Chain Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="armor_2" Content="1 Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="armor_3" Content="1 Scale Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="armor_4" Content="1 Studded Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="armor_5" Content="1 Hide Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_1" Content="Chain Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_2" Content="Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_3" Content="Scale Mail" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_4" Content="Studded Leather Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="armor_5" Content="Hide Armor" Checked="ItemChecked" Unchecked="ItemUnchecked" />
 
                             <TextBlock Text="Packs" FontWeight="Bold" Margin="0,10,0,0" />
-                            <CheckBox x:Name="packs_1" Content="1 Explorer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="packs_2" Content="1 Burglar's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="packs_3" Content="1 Diplomat's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="packs_4" Content="1 Entertainer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="packs_5" Content="1 Priest's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_1" Content="Explorer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_2" Content="Burglar's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_3" Content="Diplomat's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_4" Content="Entertainer's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="packs_5" Content="Priest's Pack" Checked="ItemChecked" Unchecked="ItemUnchecked" />
 
                             <TextBlock Text="Tools" FontWeight="Bold" Margin="0,10,0,0" />
-                            <CheckBox x:Name="tools_1" Content="1 Thieves' Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="tools_2" Content="1 Artisan's Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="tools_3" Content="1 Musical Instrument " Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="tools_4" Content="1 Herbalism Kit" Checked="ItemChecked" Unchecked="ItemUnchecked" />
-                            <CheckBox x:Name="tools_5" Content="1 Alchemist's Supplies" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_1" Content="Thieves' Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_2" Content="Artisan's Tools" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_3" Content="Musical Instrument " Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_4" Content="Herbalism Kit" Checked="ItemChecked" Unchecked="ItemUnchecked" />
+                            <CheckBox x:Name="tools_5" Content="Alchemist's Supplies" Checked="ItemChecked" Unchecked="ItemUnchecked" />
                         </StackPanel>
                         <Button x:Name="go" Content="Finish" Click="Go_Click" Margin="0,15,0,0" />
                     </StackPanel>
