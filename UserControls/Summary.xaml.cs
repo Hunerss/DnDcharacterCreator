@@ -64,7 +64,7 @@ namespace DnDcharacterCreator.UserControls
             ModifyProf modifyProf = new(this, "Add", true);
             modifyProf.Show();
         }
-        
+
         private void RemoveProf_Click(object sender, RoutedEventArgs e)
         {
             ModifyProf modifyProf = new(this, "Remove", true);
@@ -95,7 +95,7 @@ namespace DnDcharacterCreator.UserControls
 
             if (order == "Add")
             {
-                if(list.Contains("None"))
+                if (list.Contains("None"))
                     list.Remove("None");
                 list.Add(properityName);
                 Console.WriteLine("Item/Prof added");
@@ -474,7 +474,7 @@ namespace DnDcharacterCreator.UserControls
             GeneratePanels(profficiences_tools, "Tools");
             GeneratePanels(profficiences_languages, "");
             GeneratePanels(items, "Inventory");
-            Console.WriteLine(character.Inventory.Items.Count);
+            FillEmpty();
         }
 
         private void GeneratePanels(StackPanel stackPanel, string kind)
@@ -637,6 +637,22 @@ namespace DnDcharacterCreator.UserControls
                     Console.WriteLine($"Error saving file: {ex.Message}");
                 }
             }
+        }
+
+        private void FillEmpty()
+        {
+            if (description.Text == "")
+                description.Text = "As a quiet and reserved individual, you prefer not to reveal too much about yourself.";
+            if (background.Text == "")
+                background.Text = "Your past is shrouded in mystery, lost to war, time, or simply erased by the will of others.";
+            if (ideals.Text == "")
+                ideals.Text = "As a pragmatist, you don't subscribe to lofty ideals or grand visions.";
+            if (bonds.Text == "")
+                bonds.Text = "You're not bound to any place, person, or cause—freedom is your only constant.";
+            if (flaws.Text == "")
+                flaws.Text = "You pride yourself on your humility and honesty, believing you have no significant flaws.";
+            if (about.Text == "")
+                about.Text = "You're the quintessential adventurer—ordinary and unremarkable, blending into the crowd like bread without butter. Unexciting, yet dependable.";
         }
     }
 }
