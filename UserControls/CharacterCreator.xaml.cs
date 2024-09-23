@@ -603,7 +603,7 @@ namespace DnDcharacterCreator.UserControls
             return sv;
         }
 
-        private void go_Click(object sender, RoutedEventArgs e)
+        private void Go_Click(object sender, RoutedEventArgs e)
         {
             ComboBoxItem cbi = RacesComboBox.SelectedItem as ComboBoxItem;
 

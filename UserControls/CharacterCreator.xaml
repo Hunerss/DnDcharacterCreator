@@ -503,7 +503,7 @@
                             <TextBlock Text="Charisma" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3"/>
                         </Grid>
 
-                        <Button x:Name="go" Content="Finish" Click="go_Click" />
+                        <Button x:Name="go" Content="Finish" Click="Go_Click" />
                     </StackPanel>
                 </ScrollViewer>
             </Border>
