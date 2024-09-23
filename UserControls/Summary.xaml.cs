@@ -95,12 +95,16 @@ namespace DnDcharacterCreator.UserControls
 
             if (order == "Add")
             {
+                if(list.Contains("None"))
+                    list.Remove("None");
                 list.Add(properityName);
                 Console.WriteLine("Item/Prof added");
             }
             else if (order == "Remove")
             {
                 list.Remove(properityName);
+                if (list.Count == 0)
+                    list.Add("None");
                 Console.WriteLine("Item/Prof removed");
             }
             else
