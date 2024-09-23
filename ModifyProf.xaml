@@ -5,18 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnDcharacterCreator"
         mc:Ignorable="d"
-        Title="ModifyProf" Height="90" Width="180">
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        Title="Creator" Height="120" Width="200">
     <StackPanel Width="170px" HorizontalAlignment="Center" VerticalAlignment="Top">
         <TextBlock x:Name="header"/>
-        <DockPanel>
-            <ComboBox x:Name="prof" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 5 0">
-                <ComboBoxItem x:Name="weapons" Content="Wapons" IsSelected="True"/>
-                <ComboBoxItem x:Name="armors" Content="Armors"/>
-                <ComboBoxItem x:Name="tools" Content="Tools"/>
-                <ComboBoxItem x:Name="languages" Content="Languages"/>
-            </ComboBox>
-            <StackPanel>
-                <TextBlock Text="Proficiency Name"/>
+        <DockPanel Margin="0 0 0 10">
+            <Grid>
+                <ComboBox x:Name="prof" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 5 0">
+                    <ComboBoxItem x:Name="weapons" Content="Wapons" IsSelected="True" />
+                    <ComboBoxItem x:Name="armors" Content="Armors" />
+                    <ComboBoxItem x:Name="tools" Content="Tools" />
+                    <ComboBoxItem x:Name="languages" Content="Languages" />
+                </ComboBox>
+                <TextBox x:Name="item" Text="Item" Width="70" Height="21" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 5 0" IsReadOnly="True"/>
+            </Grid>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="nameHeader" Text="Proficiency Name"/>
                 <TextBox x:Name="name" Text="Name"/>
             </StackPanel>
         </DockPanel>

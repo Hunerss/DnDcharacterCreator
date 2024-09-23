@@ -23,10 +23,10 @@ namespace DnDcharacterCreator.UserControls
             TextBox[] textBoxes = [name, race, clas, subclass, hitpoints, spellcastingAbility, spellcastingBonus, spellDC, strength, dexterity, constitution,
                 intelligence, wisdom, charisma, strength_sv, dexterity_sv, constitution_sv, intelligence_sv, wisdom_sv, charisma_sv, strength_sv_prof, dexterity_sv_prof,
                 constitution_sv_prof, intelligence_sv_prof, wisdom_sv_prof, charisma_sv_prof, alignment, background, description, ideals, bonds, flaws, about,
-                acrobatics_score, acrobatics_prof, animal_handling_score, animal_handling_prof, arcana_score, arcana_prof, athletics_score, athletics_prof, deception_score, 
+                acrobatics_score, acrobatics_prof, animal_handling_score, animal_handling_prof, arcana_score, arcana_prof, athletics_score, athletics_prof, deception_score,
                 deception_prof, history_score, history_prof, insight_score, insight_prof, intimidation_score, intimidation_prof, investigation_score, investigation_prof,
-                medicine_score, medicine_prof, nature_score, nature_prof, perception_score, perception_prof, performance_score, performance_prof, persuasion_score, 
-                persuasion_prof, religion_score, religion_prof, sleight_of_hand_score, sleight_of_hand_prof, stealth_score, stealth_prof, survival_score, survival_prof];
+                medicine_score, medicine_prof, nature_score, nature_prof, perception_score, perception_prof, performance_score, performance_prof, persuasion_score,
+                persuasion_prof, religion_score, religion_prof, sleight_of_hand_score, sleight_of_hand_prof, stealth_score, stealth_prof, survival_score, survival_prof, gold];
             foreach (TextBox textBox in textBoxes)
                 textBox.IsReadOnly = false;
         }
@@ -38,26 +38,96 @@ namespace DnDcharacterCreator.UserControls
                 constitution_sv_prof, intelligence_sv_prof, wisdom_sv_prof, charisma_sv_prof, alignment, background, description, ideals, bonds, flaws, about,
                 acrobatics_score, acrobatics_prof, animal_handling_score, animal_handling_prof, arcana_score, arcana_prof, athletics_score, athletics_prof, deception_score,
                 deception_prof, history_score, history_prof, insight_score, insight_prof, intimidation_score, intimidation_prof, investigation_score, investigation_prof,
-                medicine_score, medicine_prof, nature_score, nature_prof, perception_score, perception_prof, performance_score, performance_prof, persuasion_score, 
-                persuasion_prof, religion_score, religion_prof, sleight_of_hand_score, sleight_of_hand_prof, stealth_score, stealth_prof, survival_score, survival_prof];
+                medicine_score, medicine_prof, nature_score, nature_prof, perception_score, perception_prof, performance_score, performance_prof, persuasion_score,
+                persuasion_prof, religion_score, religion_prof, sleight_of_hand_score, sleight_of_hand_prof, stealth_score, stealth_prof, survival_score, survival_prof, gold];
             foreach (TextBox textBox in textBoxes)
                 textBox.IsReadOnly = true;
         }
 
-        private void AddProf_Click(object sender, RoutedEventArgs e)
+        private void addItem_Click(object sender, RoutedEventArgs e)
         {
-            ModifyProf modifyProf = new(this);
+            ModifyProf modifyProf = new(this, "Add", false);
             modifyProf.Show();
         }
 
-        public void something(object data)
+        private void removeItem_Click(object sender, RoutedEventArgs e)
         {
-
+            ModifyProf modifyProf = new(this, "Add", false);
+            modifyProf.Show();
         }
 
+        private void AddProf_Click(object sender, RoutedEventArgs e)
+        {
+            ModifyProf modifyProf = new(this, "Add", true);
+            modifyProf.Show();
+        }
         private void RemoveProf_Click(object sender, RoutedEventArgs e)
         {
+            ModifyProf modifyProf = new(this, "Remove", true);
+            modifyProf.Show();
+        }
 
+        public void GenerateNewProperities(string properityName, string properityKind, string order, bool check)
+        {
+            List<string> list = properityKind switch
+            {
+                "Weapons" => new List<string>(character.Proficiencies.Weapons),
+                "Armors" => new List<string>(character.Proficiencies.Armor),
+                "Tools" => new List<string>(character.Proficiencies.Tools),
+                "Languages" => new List<string>(character.Proficiencies.Languages),
+                "Inventory" => new List<string>(character.Proficiencies.Languages),
+                _ => null
+            };
+
+            if (list == null)
+            {
+                if(check)
+                    MessageBox.Show("No proficiency with that name exists in this category.");
+                else
+                    MessageBox.Show("No item with that name exists.");
+                return;
+            }
+
+
+            if (order == "Add")
+            {
+                list.Add(properityName);
+            }
+            else if (order == "Remove")
+            {
+                list.Remove(properityName);
+            }
+            else
+            {
+                Console.WriteLine("Invalid order");
+                return;
+            }
+
+            list.Sort();
+
+            switch (properityKind)
+            {
+                case "Weapons":
+                    character.Proficiencies.Weapons = list.ToArray();
+                    break;
+                case "Armors":
+                    character.Proficiencies.Armor = list.ToArray();
+                    break;
+                case "Tools":
+                    character.Proficiencies.Tools = list.ToArray();
+                    break;
+                case "Languages":
+                    character.Proficiencies.Languages = list.ToArray();
+                    break;
+                case "Inventory":
+                    character.Inventory.Items = list;
+                    break;
+            }
+
+            GeneratePanels(profficiences_weapons, "Weapons");
+            GeneratePanels(profficiences_armor, "Armors");
+            GeneratePanels(profficiences_tools, "Tools");
+            GeneratePanels(profficiences_languages, "");
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -180,12 +250,12 @@ namespace DnDcharacterCreator.UserControls
 
             if (character.Skills.Contains("Acrobatics"))
             {
-                acrobatics_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString();;
+                acrobatics_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString(); ;
                 acrobatics_prof.Text = "PR";
             }
             else
             {
-                acrobatics_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString();;
+                acrobatics_score.Text = (Math.Floor((character.Stats.Dexterity - 10) / 2.0)).ToString(); ;
                 acrobatics_prof.Text = "";
             }
 
@@ -386,13 +456,16 @@ namespace DnDcharacterCreator.UserControls
                 survival_score.Text = (Math.Floor((character.Stats.Wisdom - 10) / 2.0)).ToString();
                 survival_prof.Text = "";
             }
-            GenerateProficiences(profficiences_weapons, "Weapons");
-            GenerateProficiences(profficiences_armor, "Armors");
-            GenerateProficiences(profficiences_tools, "Tools");
-            GenerateProficiences(profficiences_languages, "");
+            gold.Text = character.Inventory.Gold.ToString();
+            GeneratePanels(profficiences_weapons, "Weapons");
+            GeneratePanels(profficiences_armor, "Armors");
+            GeneratePanels(profficiences_tools, "Tools");
+            GeneratePanels(profficiences_languages, "");
+            GeneratePanels(items, "Inventory");
+            Console.WriteLine(character.Inventory.Items.Count);
         }
 
-        private void GenerateProficiences(StackPanel stackPanel, string kind)
+        private void GeneratePanels(StackPanel stackPanel, string kind)
         {
             stackPanel.Children.Clear();
             string[] profs;
@@ -401,6 +474,8 @@ namespace DnDcharacterCreator.UserControls
             else if (kind == "Armors")
                 profs = character.Proficiencies.Armor;
             else if (kind == "Tools")
+                profs = character.Proficiencies.Tools;
+            else if (kind == "Inventory")
                 profs = character.Proficiencies.Tools;
             else
                 profs = character.Proficiencies.Languages;
