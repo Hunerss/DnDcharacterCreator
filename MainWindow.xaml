@@ -1,4 +1,4 @@
-﻿<Window x:Class="DnDcharacterCreator.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:DnDcharacterCreator" mc:Ignorable="d" Title="DnD Character Creator" Height="450" Width="800" Icon="images/icon.png">
+﻿<Window x:Class="DnDcharacterCreator.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:DnDcharacterCreator" mc:Ignorable="d" WindowStartupLocation="CenterScreen" Title="DnD Character Creator" Height="450" Width="800" Icon="images/icon.png">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Padding" Value="10" />
