@@ -66,5 +66,10 @@ namespace DnDcharacterCreator.UserControls
                 }
             }
         }
+
+        private void Close_app_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

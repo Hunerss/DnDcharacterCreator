@@ -73,6 +73,7 @@
                     </Button.Foreground>
                 </Button>
                 <Button Name="load_character" Content="Load Old Character" Click="Load_character_Click" Margin="0 50 0 0"/>
+                <Button Name="close_app" Content="Close Character Creator" Click="Close_app_Click" Margin="0 50 0 0" />
             </StackPanel>
         </Grid>
     </Grid>
