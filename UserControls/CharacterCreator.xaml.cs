@@ -89,8 +89,9 @@ namespace DnDcharacterCreator.UserControls
             characterName.Text = GenerateRandomName(race);
         }
 
-        private void ClassesComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void ClassesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            SubclassesComboBox.Items.Clear();
             string selectedClass = (ClassesComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
             ShowSpellcastingAbilityForClass(selectedClass);
             switch (selectedClass)
@@ -174,7 +175,7 @@ namespace DnDcharacterCreator.UserControls
 
         private void ShowSpellcastingAbilityForClass(string selectedClass)
         {
-            string[] spellcastingClasses = { "Bard", "Cleric", "Druid", "Sorcerer", "Warlock", "Wizard", "Paladin", "Monk" };
+            string[] spellcastingClasses = { "Bard", "Cleric", "Druid", "Sorcerer", "Warlock", "Ranger", "Wizard", "Paladin", "Monk" };
 
             if (Array.Exists(spellcastingClasses, element => element == selectedClass))
             {
@@ -188,6 +189,7 @@ namespace DnDcharacterCreator.UserControls
                     "Warlock" => "Charisma",
                     "Paladin" => "Charisma",
                     "Cleric" => "Wisdom",
+                    "Ranger" => "Wisdom",
                     "Druid" => "Wisdom",
                     "Monk" => "Wisdom",
                     "Wizard" => "Intelligence",
