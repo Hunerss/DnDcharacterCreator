@@ -37,7 +37,7 @@ namespace DnDcharacterCreator.UserControls
             BackgroundComboBox.SelectedIndex = rnd.Next(0, 12);
         }
 
-        private void go_Click(object sender, RoutedEventArgs e)
+        private void Go_Click(object sender, RoutedEventArgs e)
         {
             ComboBoxItem cbi = AlignmentComboBox.SelectedItem as ComboBoxItem;
 

@@ -403,7 +403,7 @@
                         <TextBlock Text="About" Margin="10,20,0,5" />
                         <TextBox x:Name="about" MinHeight="20px" TextWrapping="Wrap" Margin="5px" />
 
-                        <Button x:Name="go" Content="Finish" Click="go_Click" Margin="15" />
+                        <Button x:Name="go" Content="Finish" Click="Go_Click" Margin="15" />
                     </StackPanel>
                 </ScrollViewer>
             </Border>
